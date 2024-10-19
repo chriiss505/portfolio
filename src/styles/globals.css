@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Fraunces:wght@700&family=Erica+One&display=swap");
+@font-face {
+  font-family: "EuropeanTeletext";
+  src: url("../assets/fonts/EuropeanTeletext.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --text-color: #433434;
+  --black: #000000;
+  --magenta: #ff00ff;
+  --secondary-text-color: #ee6969;
+  --background-color: #f2ebeb;
+  --background-strong: #d9d3d3;
+  --lavander: #ecb8fd;
+  --turquoise: #ace8d5;
+  --yellow: #e6e8ac;
+  --violet: #7770c0;
+  --green: #199e8e;
+  --red: #dd8e8e;
+  --button-background: #ee6969;
+  --blue: #81ade8;
+  --grey: #e3e3e3;
+  --white: #ffffff;
+  --green2: #8aae98;
+
+  --section-1-background: #7770c0;
+  --section-1-text: #ecb8fd;
+
+  --section-2-background: #199e8e;
+  --section-2-text: #ace8d5;
+
+  --section-3-background: #dcb66f;
+  --section-3-text: #fcfdd8;
+
+  --section-4-background: #729fdb;
+  --section-4-text: #cddff8;
+
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Fraunces", serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 49px;
+}
+
+h2 {
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  font-size: 39px;
+}
+
+h6 {
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+a {
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 500; /* Medium */
+  font-size: 18px;
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+/* Variables para un tema oscuro (opcional) */
+.dark-theme {
+  --primary-color: #2c3e50;
+  --secondary-color: #27ae60;
+  --text-color: #ecf0f1;
+  --background-color: #34495e;
+}

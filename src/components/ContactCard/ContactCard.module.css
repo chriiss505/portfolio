@@ -1,0 +1,21 @@
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--background-strong);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Espaciado entre las tarjetas */
+  text-align: center; /* Centrar el contenido */
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--subtitle-color);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 28px;
+  color: var(--title-color);
+}

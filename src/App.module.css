@@ -1,0 +1,123 @@
+/* Centra las cards en la página */
+.iconCard {
+  display: flex;
+  align-items: center;
+  background-color: var(--white); /* Color de fondo */
+  border-radius: 8px; /* Esquinas redondeadas */
+  margin: 20px;
+  justify-content: center;
+  max-width: 1200px;
+}
+.contactGif {
+  width: 100%; /* Ajusta el tamaño si es necesario */
+  max-width: 100px; /* Por ejemplo, para limitar su tamaño máximo */
+}
+
+.customIconCard {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-strong); /* Color de fondo */
+  border-radius: 8px; /* Esquinas redondeadas */
+  width: 100%; /* Ancho completo, igual al de las otras tarjetas */
+  margin: 20px 0;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Centrado vertical */
+  padding: 0 50px;
+  background-color: var(--background-color);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Estilos para organizar las tarjetas en una fila con Flexbox */
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en la siguiente línea */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espacio de 20px entre las tarjetas */
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para la fila de tarjetas */
+}
+
+.card {
+  flex: 1 0 300px; /* Cada tarjeta ocupará al menos 300px, y se expandirá si hay espacio */
+  max-width: calc(100% - 20px); /* Asegura que no se desborde */
+}
+.customCard {
+  font-family: "EuropeanTeletext";
+}
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  background: url("./assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+  background-size: cover; /* Asegúrate de que la imagen cubra el área */
+  mix-blend-mode: multiply; /* Efecto de mezcla */
+  padding: 20px 0;
+}
+
+/* Sección del encabezado */
+.header {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center; /* Centra el texto */
+}
+
+.headerLineContainer {
+  width: 100%;
+  max-width: 1200px; /* Contenedor de la línea con el mismo ancho que las tarjetas */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.headerLine {
+  border: none; /* Sin bordes */
+  border-top: 1px solid var(--text-color); /* Línea de 1px en la parte superior */
+  width: 100%; /* Asegura que la línea ocupe el 100% del contenedor */
+}
+
+.headerTitle {
+  color: var(--text-color);
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centrado vertical */
+    padding: 20px;
+    background-color: var(--background-color);
+  }
+  .header {
+    margin-top: 20px;
+  }
+  .navbar {
+    flex-direction: column; /* O lo que necesites para diseño responsivo */
+    align-items: flex-start; /* O lo que necesites */
+  }
+  .customIconCard {
+    flex-direction: row;
+  }
+  .iconCard {
+    flex-direction: column;
+  }
+
+  .headerTitle {
+    color: var(--text-color);
+    text-align: left;
+    font-size: 29px;
+  }
+}

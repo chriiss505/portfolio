@@ -1,0 +1,146 @@
+/* Landing.module.css */
+.landing {
+  position: relative;
+  display: flex; /* Usamos flexbox para alinear las columnas */
+  width: 80vw; /* Ancho completo de la ventana */
+  max-width: 1200px;
+
+  margin-top: 120px;
+  background: url("../../assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+  background-size: cover; /* Asegúrate de que la imagen cubra el área */
+  mix-blend-mode: multiply; /* Efecto de mezcla */
+  color: var(--text-color); /* Color del texto */
+}
+.rightColumn {
+  flex: 3; /* Toma el 50% del espacio */
+  display: flex;
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Alinea a la izquierda */
+  padding: 20px; /* Espaciado interno */
+  text-align: center;
+}
+
+.rightColumn h1 {
+  text-shadow: 2px 2px 0 var(--white),
+    /* Sombra hacia abajo a la derecha */ -2px 2px 0 var(--white),
+    /* Sombra hacia abajo a la izquierda */ 2px -2px 0 var(--white),
+    /* Sombra hacia arriba a la derecha */ -2px -2px 0 var(--white);
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si hay desbordamiento */
+  text-align: center;
+  margin: 0; /* Sin márgenes */
+}
+
+.leftColumn {
+  flex: 2; /* Toma el 50% del espacio */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+.gif {
+  max-height: 700px; /* Altura máxima del gif */
+  width: auto; /* Mantiene la proporción del gif */
+}
+
+.highlighted {
+  font-size: 61px;
+  font-weight: 100;
+  font-family: "Erica One", sans-serif;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center; /* Centra el icono verticalmente */
+  height: 100px;
+  width: 100px;
+}
+
+.icon {
+  margin-left: 10px; /* Espaciado entre el texto y el icono */
+}
+@media (max-width: 768px) {
+  .gif {
+    max-height: 500px; /* Reduce aún más la altura del gif */
+  }
+
+  .rightColumn {
+    padding: 10px; /* Aumenta el espaciado en pantallas más pequeñas */
+  }
+
+  /* Landing.module.css */
+  .landing {
+    display: flex; /* Usamos flexbox para alinear las columnas */
+    width: 80vw; /* Ancho completo de la ventana */
+    background: url("../../assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+    background-size: cover; /* Asegúrate de que la imagen cubra el área */
+    mix-blend-mode: multiply; /* Efecto de mezcla */
+    color: var(--text-color); /* Color del texto */
+  }
+  .rightColumn h1 {
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si hay desbordamiento */
+    font-size: 39px;
+    margin: 0; /* Sin márgenes */
+  }
+  .leftColumn {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+
+  .rightColumn {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Alinea a la izquierda */
+    padding: 20px; /* Espaciado interno */
+  }
+  .iconContainer {
+    height: 100px;
+    width: 100px;
+    margin-left: 10px; /* Espaciado entre el texto y el icono */
+  }
+}
+@media (max-width: 480px) {
+  .gif {
+    max-height: 300px; /* Reduce aún más la altura del gif */
+  }
+
+  /* Landing.module.css */
+  .landing {
+    position: relative;
+    display: flex; /* Usamos flexbox para alinear las columnas */
+    flex-direction: column;
+    width: 80vw; /* Ancho completo de la ventana */
+    margin-top: 80px;
+    background: url("../../assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+    background-size: cover; /* Asegúrate de que la imagen cubra el área */
+    mix-blend-mode: multiply; /* Efecto de mezcla */
+    color: var(--text-color); /* Color del texto */
+  }
+  .rightColumn {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado interno */
+    align-items: center; /* Alinea el contenido al centro horizontalmente */
+  }
+  .rightColumn h1 {
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si hay desbordamiento */
+    text-align: center;
+    font-size: 25px;
+    margin: 0; /* Sin márgenes */
+  }
+  .leftColumn {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+  .iconContainer {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px; /* Espaciado entre el texto y el icono */
+  }
+}

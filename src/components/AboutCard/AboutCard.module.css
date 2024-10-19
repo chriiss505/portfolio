@@ -1,0 +1,67 @@
+.aboutCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  p {
+    color: var(--text-color);
+    font-weight: bold;
+  }
+
+  background-color: var(
+    --background-strong
+  ); /* Cambia el color de fondo según tu diseño */
+  border-radius: 8px;
+}
+
+.redText {
+  color: var(--secondary-text-color);
+}
+
+.leftColumn {
+  flex: 1;
+  margin: 20px;
+}
+
+.rightColumn {
+  flex: 0 0 200px; /* Ancho fijo para la columna de la derecha */
+}
+
+.gif {
+  width: 100%; /* Asegúrate de que el gif se ajuste al tamaño */
+  height: auto;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .aboutCard {
+    flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    align-items: center; /* Centra el contenido */
+  }
+
+  .leftColumn {
+    margin-bottom: 20px; /* Espaciado inferior para separar las columnas */
+    text-align: center; /* Centra el texto */
+  }
+
+  .rightColumn {
+    flex: 1; /* Permite que la columna de la derecha ocupe el ancho disponible */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+    display: flex; /* Asegura que el GIF se centre */
+    justify-content: center; /* Centra el contenido horizontalmente */
+  }
+
+  .gif {
+    max-width: 80%; /* Asegura que el gif no exceda el ancho de la tarjeta */
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutCard {
+    padding: 15px; /* Reduce el padding en pantallas muy pequeñas */
+  }
+
+  .gif {
+    max-width: 50%; /* Asegura que el gif no exceda el ancho de la tarjeta */
+  }
+}

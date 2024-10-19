@@ -1,0 +1,74 @@
+.borderBottom {
+  border-bottom: 1px solid var(--text-color); /* Línea separadora solo en el menú hamburguesa */
+}
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  border-radius: 0 0 10px 10px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Erica One";
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none; /* Ocultar el menú hamburguesa por defecto */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Cambia el ancho según tus necesidades */
+  .navLinks {
+    width: 100%; /* Asegúrate de que la NavBar ocupe el ancho completo */
+
+    display: none; /* Ocultar los enlaces de navegación en pantallas pequeñas */
+    flex-direction: column; /* Hacer que los enlaces se alineen en columna */
+    position: absolute; /* Posicionamiento absoluto */
+    padding-top: 20px;
+    padding-bottom: 30px;
+    top: 80px; /* Ajusta según la altura de tu navbar */
+    right: 0;
+    background-color: var(--background-color); /* Fondo de menú desplegable */
+    width: 100%; /* Ancho completo */
+    border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: block; /* Mostrar el menú hamburguesa en pantallas pequeñas */
+  }
+
+  .navLinks.active {
+    display: flex; /* Mostrar los enlaces cuando el menú está activo */
+  }
+  .navbar {
+    align-items: flex-start; /* O lo que necesites */
+  }
+}

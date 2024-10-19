@@ -1,0 +1,81 @@
+/* Estilos de la tarjeta */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #007bff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 100%; /* Se ajusta al tamaño de la pantalla */
+  color: white;
+}
+
+/* La columna izquierda de la imagen */
+.cardLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImage {
+  width: 80%;
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
+  border-radius: 10px; /* Redondea los bordes de la imagen */
+}
+
+/* La columna derecha del contenido */
+.cardRight {
+  display: flex; /* Habilita el uso de flexbox */
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: space-between; /* Espacio entre los elementos */
+  height: 100%; /* Asegura que ocupe el 100% de la tarjeta */
+}
+
+/* Título */
+.cardTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Contenedor de los tags */
+.cardTags {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los tags se dividan en múltiples líneas */
+  margin-top: 10px;
+  gap: 5px;
+}
+
+/* Descripción */
+.cardDescription {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Botón alineado a la derecha */
+.cardButton {
+  margin-top: 15px; /* Espacio arriba del botón */
+  text-align: right; /* Alinea el botón a la derecha */
+  flex-shrink: 0; /* Evita que el botón se reduzca */
+}
+
+/* Media Queries para hacer la tarjeta responsiva */
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr; /* Cambiamos a una sola columna en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .cardRight {
+    padding-left: 0;
+  }
+
+  .cardButton {
+    margin-left: 0;
+    text-align: center; /* Cambia la alineación a centro */
+  }
+  .cardTags {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,102 @@
+/* Estilos para la superposición del modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Añadir un poco de padding para evitar que el modal toque los bordes en pantallas pequeñas */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+/* Estilos para la ventana del modal */
+.modalContent {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%; /* Ajusta según lo necesites */
+  max-width: 600px; /* Tamaño máximo */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  animation: fadeIn 0.3s ease-in-out; /* Efecto de fade-in */
+  z-index: 1001;
+  position: relative;
+  overflow: hidden; /* Asegura que el contenido no sobresalga */
+}
+
+/* Efecto de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botón para cerrar el modal */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* Color del icono de cerrar */
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover para el botón de cerrar */
+.closeButton:hover {
+  color: #f44336; /* Color al hacer hover (rojo claro) */
+}
+
+.modalImage {
+  width: 100%;
+  max-width: 100%;
+  max-height: 80vh; /* Asegura que la imagen nunca exceda la altura de la pantalla */
+  object-fit: contain; /* Ajusta la imagen dentro del modal sin recortarla */
+  transition: transform 0.3s ease;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para pantallas medianas, como tablets */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 90%; /* Ocupar un poco más de la pantalla */
+    padding: 15px; /* Reducir el padding para tablets */
+    max-width: 500px; /* Reducir el tamaño máximo */
+  }
+
+  .closeButton {
+    font-size: 20px; /* Ajustar el tamaño del botón de cerrar */
+  }
+}
+
+/* Para pantallas pequeñas, como móviles */
+@media (max-width: 480px) {
+  .modalContent {
+    width: 95%; /* Ocupar casi todo el ancho de la pantalla */
+    padding: 10px; /* Reducir aún más el padding */
+    max-width: 100%; /* Sin tamaño máximo para móviles */
+  }
+
+  .closeButton {
+    font-size: 18px; /* Reducir el tamaño del botón de cerrar */
+    top: 5px; /* Ajustar la posición en móviles */
+    right: 5px;
+  }
+
+  .modalImage {
+    width: 100%; /* Asegurar que las imágenes ocupen todo el ancho */
+    height: auto; /* Mantener la proporción de las imágenes */
+  }
+}

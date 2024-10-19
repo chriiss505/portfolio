@@ -1,0 +1,35 @@
+/* src/components/Tags/Tag.module.css */
+.tag {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #fff; /* Color del texto */
+  white-space: nowrap;
+  border: 5px solid; /* Añadir borde */
+  box-sizing: border-box; /* Asegurarse de que el padding y el borde se consideren en el tamaño total */
+}
+
+.ux {
+  border-color: var(--yellow); /* Amarillo */
+  background-color: transparent; /* Sin fondo */
+}
+
+.ui {
+  border-color: var(--blue); /* Verde */
+  background-color: transparent; /* Sin fondo */
+}
+
+.coding {
+  border-color: var(--lavander); /* Azul */
+  background-color: transparent; /* Sin fondo */
+}
+
+.graphicDesign {
+  border-color: var(--turquoise); /* Rosa */
+  background-color: transparent; /* Sin fondo */
+}
+
+.defaultTag {
+  border-color: #bdc3c7; /* Color de respaldo */
+  background-color: transparent; /* Sin fondo */
+}
