@@ -15,7 +15,8 @@
 }
 
 .redText {
-  color: var(--secondary-text-color);
+  color: var(--text-color);
+  font-weight: 200;
 }
 
 .leftColumn {

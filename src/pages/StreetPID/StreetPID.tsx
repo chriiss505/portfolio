@@ -48,19 +48,25 @@ const StreetPID: React.FC = () => {
           <div className={styles.leftColumnProject}>
             <h2>Project overview:</h2>
             <p>
-              Goals: The goal of this project was to meet the requirements of
-              public tenders that mandate real-time bus arrival displays on
-              public information screens. These screens are placed at bus stops
-              or transit areas to inform passengers of the next arrivals and
-              other relevant information without user interaction. The app was
-              also designed for private transport companies, such as those
-              offering shuttle services from Barcelona’s cruise terminal to the
-              city center, to keep their passengers informed in real time.
+              <strong>Goals:</strong> The aim of this project was to fulfill the
+              requirements set by public tenders, which mandated the
+              implementation of real-time bus arrival displays on public
+              information screens. These displays are installed at bus stops or
+              transit hubs, providing passengers with next bus arrivals and
+              other relevant information without any user interaction.
+              Additionally, the app was tailored for private transport
+              companies, such as those offering shuttle services from
+              Barcelona’s cruise terminal to the city center, ensuring
+              passengers stay informed in real time.
             </p>
+
             <p>
-              Clients: Transports Urbans de Sabadell, Govern d’Andorra, Aena
-              Barcelona, Aena Madrid. My role: Designing and coding frontend
-              Featured in
+              <strong>Clients:</strong> Transports Urbans de Sabadell, Govern
+              d’Andorra, Aena Barcelona, Aena Madrid.
+            </p>
+
+            <p>
+              <strong>My role:</strong> Designing and coding the frontend.
             </p>
           </div>
           <div className={styles.rightColumnProject}>
