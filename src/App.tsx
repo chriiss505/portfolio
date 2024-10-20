@@ -20,6 +20,7 @@ import emailIcon from "./assets/images/email_logo.png";
 import linkedInIcon from "./assets/images/linkedin_logo.png";
 import brilloIcon from "./assets/images/brillo.svg";
 import sioTurning from "./assets/images/sio_turning_v3.gif";
+import arrowDown from "./assets/images/down.svg";
 
 /*--------------images------------*/
 
@@ -96,8 +97,8 @@ function App() {
                 <AboutCard />
                 <IconCard
                   text="Extra project"
-                  imgSrc={brilloIcon}
-                  rightImgSrc={brilloIcon}
+                  imgSrc={arrowDown}
+                  rightImgSrc={arrowDown}
                   className={styles.customIconCard}
                 />
                 <div className={styles.cardGrid}>

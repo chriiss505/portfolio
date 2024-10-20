@@ -10,6 +10,7 @@ interface CardProps {
   description: string;
   readMoreLink: string;
   backgroundColor: string;
+  textColor?: string; // Cambia a opcional
   className?: string; // Agrega el prop para la clase
 }
 
@@ -20,6 +21,7 @@ const Card: React.FC<CardProps> = ({
   description,
   readMoreLink,
   backgroundColor,
+  textColor = "inherit", // Valor predeterminado
   className, // Agrega el className aquí
 }) => {
   return (
@@ -28,7 +30,7 @@ const Card: React.FC<CardProps> = ({
       <div className={styles.cardLeft}>
         <img src={imageSrc} alt={title} className={styles.cardImage} />
       </div>
-      <div className={styles.cardRight}>
+      <div className={styles.cardRight} style={{ color: textColor }}>
         <h1 className={styles.cardTitle}>{title}</h1>
         <p className={styles.cardDescription}>{description}</p>
         <div className={styles.cardTags}>

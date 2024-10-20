@@ -37,7 +37,7 @@ const StreetPID: React.FC = () => {
         <div className={styles.tagsContainer}>
           <Tag name="UI" />
           <Tag name="UX" />
-          <Tag name="Graphic Design" />
+          <Tag name="GraphicDesign" />
           <Tag name="Coding" />
         </div>
       </div>
@@ -83,6 +83,7 @@ const StreetPID: React.FC = () => {
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
           title="Technologies and Tools Used:"
+          titleColor="var(--section-1-title)"
           icons={[
             { src: illustrator, alt: "Icon 1" },
             { src: photoshop, alt: "Icon 2" },
@@ -118,9 +119,10 @@ const StreetPID: React.FC = () => {
             </ul>
           }
         />
-
+        <hr className={styles.separator} />
         <DescriptionLayout
           title="Architecture and Data Management:"
+          titleColor="var(--section-1-title)"
           icons={[{ src: computer, alt: "Icon 6" }]}
           paragraph={
             <>
@@ -147,9 +149,10 @@ const StreetPID: React.FC = () => {
             </>
           }
         />
-
+        <hr className={styles.separator} />
         <DescriptionLayout
           title="Key Features:"
+          titleColor="var(--section-1-title)"
           icons={[{ src: keyboard, alt: "Icon 8" }]}
           paragraph={
             <>
@@ -172,9 +175,10 @@ const StreetPID: React.FC = () => {
             </>
           }
         />
-
+        <hr className={styles.separator} />
         <DescriptionLayout
           title="Challenges and Solutions:"
+          titleColor="var(--section-1-title)"
           icons={[{ src: sakura, alt: "Icon 10" }]}
           paragraph={
             <>
@@ -199,9 +203,10 @@ const StreetPID: React.FC = () => {
             </>
           }
         />
-
+        <hr className={styles.separator} />
         <DescriptionLayout
           title="Design Considerations:"
+          titleColor="var(--section-1-title)"
           icons={[{ src: handw, alt: "Icon 12" }]}
           paragraph={
             <>
@@ -229,7 +234,8 @@ const StreetPID: React.FC = () => {
 
       {/* Cuarta Card con el componente Carousel */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
-        <Carousel /> {/* Aquí usas tu componente Carousel */}
+        <Carousel titleColor="var(--section-1-title)" />{" "}
+        {/* Aquí usas tu componente Carousel */}
       </div>
     </div>
   );

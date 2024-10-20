@@ -4,7 +4,7 @@
 
   border-radius: 15px;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-color); /* Color del texto */
   white-space: nowrap;
   box-sizing: border-box; /* Asegurarse de que el padding y el borde se consideren en el tamaño total */

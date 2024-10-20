@@ -27,15 +27,18 @@
   --green3: #7efdb0;
 
   --section-1-background: #7770c0;
+  --section-1-title: #7770c0;
   --section-1-text: #ecb8fd;
 
   --section-2-background: #199e8e;
+  --section-2-title: #199e8e;
+
   --section-2-text: #ace8d5;
 
   --section-3-background: #c5a66c;
   --section-3-text: #fcfdd8;
 
-  --section-4-background: #729fdb;
+  --section-4-background: #508ba5;
   --section-4-text: #cddff8;
 
   --section-5-background: #000000;

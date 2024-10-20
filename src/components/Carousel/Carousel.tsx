@@ -9,8 +9,12 @@ import image2 from "../../assets/images/street_pid_2.png";
 import image3 from "../../assets/images/street_pid_2.png";
 import image4 from "../../assets/images/sio_turning_v3.gif";
 
-const Carousel: React.FC = () => {
-  const images = [image1, image2, image3, image4]; // Arreglo de imágenes
+interface CarouselProps {
+  titleColor?: string; // Propiedad opcional para el color del título
+}
+
+const Carousel: React.FC<CarouselProps> = ({ titleColor }) => {
+  const images = [image1, image2, image3]; // Arreglo de imágenes
   const [currentIndex, setCurrentIndex] = useState<number>(0); // Índice actual de la imagen
   const [modalImage, setModalImage] = useState<string | null>(null); // Imagen para el modal
   const scrollContainerRef = useRef<HTMLDivElement>(null); // Referencia del contenedor de scroll
@@ -59,7 +63,8 @@ const Carousel: React.FC = () => {
     <div className={`${styles.card} ${styles.whiteBackground}`}>
       <div className={styles.twoThirdsLayout}>
         <div className={styles.leftColumn}>
-          <h2>Additional Info</h2>
+          <h2 style={{ color: titleColor || "inherit" }}>Product Pictures</h2>{" "}
+          {/* Usa el color de la prop */}
           <div className={styles.arrowsContainer}>
             <Icon src={arrowLeft} alt="Previous" onClick={prevImage} />{" "}
             {/* Flecha izquierda */}
@@ -79,10 +84,6 @@ const Carousel: React.FC = () => {
                   index === currentIndex ? styles.active : ""
                 }`}
                 onClick={() => openModal(image)} // Abre el modal
-                style={{
-                  transform: index === currentIndex ? "scale(1.1)" : "scale(1)",
-                  transition: "transform 0.3s ease-in-out",
-                }}
               />
             ))}
           </div>

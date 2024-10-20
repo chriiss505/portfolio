@@ -34,11 +34,11 @@ const OnboardPID: React.FC = () => {
       <div
         className={`${styles.titleCard} ${styles.backgroundColor} ${styles.card}`}
       >
-        <h1 className={styles.centerText}>Street PID's APK</h1>
+        <h1 className={styles.centerText}>On Board PID's APK</h1>
         <div className={styles.tagsContainer}>
           <Tag name="UI" />
           <Tag name="UX" />
-          <Tag name="Graphic Design" />
+          <Tag name="GraphicDesign" />
           <Tag name="Coding" />
         </div>
       </div>
@@ -87,6 +87,7 @@ const OnboardPID: React.FC = () => {
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
           title="Technologies and Tools Used:"
+          titleColor="var(--section-2-title)"
           icons={[
             { src: illustrator, alt: "Icon 1" },
             { src: photoshop, alt: "Icon 2" },
@@ -114,6 +115,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title="Architecture and Data Management:"
+          titleColor="var(--section-2-title)"
           icons={[{ src: computer, alt: "Icon 6" }]}
           paragraph={
             <>
@@ -161,6 +163,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title="Key Features:"
+          titleColor="var(--section-2-title)"
           icons={[{ src: keyboard, alt: "Icon 8" }]}
           paragraph={
             <>
@@ -192,6 +195,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title="Challenges and Solutions:"
+          titleColor="var(--section-2-title)"
           icons={[{ src: sakura, alt: "Icon 10" }]}
           paragraph={
             <>
@@ -219,6 +223,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title="Design Considerations:"
+          titleColor="var(--section-2-title)"
           icons={[{ src: handw, alt: "Icon 12" }]}
           paragraph={
             <>

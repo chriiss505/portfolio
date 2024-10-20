@@ -28,7 +28,7 @@
 
 .titleCard h1 {
   margin: 0px;
-  color: var(--section-2-text);
+  color: var(--white);
 }
 
 .backgroundColor {
@@ -36,12 +36,14 @@
 }
 
 .whiteBackground {
+  border: 2px solid var(--black);
+
   background-color: var(--background-strong); /* Blanco */
 }
 
 .leftColumnProject {
   width: 50%;
-  color: var(--section-2-text);
+  color: var(--white);
 }
 
 .rightColumnProject {

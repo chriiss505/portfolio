@@ -1,6 +1,8 @@
 .videoCard {
+  border: 2px solid var(--black);
+
   background-color: var(--background-strong); /* Color de fondo */
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 10px; /* Bordes redondeados */
   padding: 20px; /* Espaciado interno */
   margin: 20px; /* Espaciado externo */
   max-width: 1200px; /* Ancho máximo */
@@ -46,7 +48,7 @@
 
 .title {
   margin-bottom: 10px; /* Espacio debajo del título */
-  color: var(--secondary-text-color); /* Color del texto */
+  color: var(--section-2-title); /* Color del texto */
 }
 
 /* Media Queries para hacer el diseño responsivo */

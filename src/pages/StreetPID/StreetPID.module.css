@@ -28,20 +28,21 @@
 
 .titleCard h1 {
   margin: 0px;
-  color: var(--lavander);
+  color: var(--white);
 }
 
 .backgroundColor {
-  background-color: var(--violet); /* Lila */
+  background-color: var(--section-1-background); /* Lila */
 }
 
 .whiteBackground {
+  border: 2px solid var(--black);
   background-color: var(--background-strong); /* Blanco */
 }
 
 .leftColumnProject {
   width: 50%;
-  color: var(--section-1-text);
+  color: var(--white);
 }
 
 .rightColumnProject {
@@ -115,6 +116,11 @@
 .twoThirdsLayout {
   display: flex;
   justify-content: space-between;
+}
+.separator {
+  border: none;
+  border-top: 1px dashed var(--section-1-background); /* Cambia el color según sea necesario */
+  margin: 20px 0; /* Espaciado alrededor de la línea */
 }
 
 /* MEDIA QUERIES */
