@@ -49,11 +49,6 @@
   color: var(--secondary-text-color); /* Color del texto */
 }
 
-.description {
-  font-size: 1rem; /* Tamaño de fuente de la descripción */
-  color: #666; /* Color del texto */
-}
-
 /* Media Queries para hacer el diseño responsivo */
 @media (max-width: 768px) {
   .content {
@@ -67,23 +62,5 @@
 
   .videoContainer {
     padding-bottom: 56.25%; /* Mantener proporción de aspecto 16:9 */
-  }
-
-  .title {
-    font-size: 1.25rem; /* Ajustar tamaño del título para pantallas más pequeñas */
-  }
-
-  .description {
-    font-size: 0.9rem; /* Ajustar tamaño de fuente de la descripción */
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.1rem; /* Ajustar aún más el tamaño del título */
-  }
-
-  .description {
-    font-size: 0.85rem; /* Ajustar aún más el tamaño de la descripción */
   }
 }

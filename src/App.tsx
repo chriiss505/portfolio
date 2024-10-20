@@ -57,7 +57,6 @@ function App() {
                     description="These Street PID’s (Public Information Displays) are placed at bus stops or transit areas to inform passengers of the next arrivals and other relevant information without user interaction."
                     readMoreLink="/street-pid" // Enlace para detalles
                     backgroundColor="var(--section-1-background)"
-                    textColor="var(--section-1-text)"
                   />
                   <Card
                     imageSrc={onboardPIDImage}
@@ -66,7 +65,6 @@ function App() {
                     description="This onboard public information display app provides passengers with real-time updates on upcoming bus stops, destinations, connections to other public transport, and media content such as videos or images."
                     readMoreLink="/onboard-pid" // Enlace para detalles
                     backgroundColor="var(--section-2-background)"
-                    textColor="var(--section-2-text)"
                   />
                   <Card
                     imageSrc={itsImage}
@@ -75,7 +73,6 @@ function App() {
                     description="Intelligent Transportation Systems (ITS) allows to manage public transportation fleets in real-time. My role focused on UI/UX design, specifically prototyping and designing the interface to ensure it was intuitive for transit operators."
                     readMoreLink="/its-system" // Enlace para detalles
                     backgroundColor="var(--section-3-background)"
-                    textColor="var(--section-3-text)"
                   />
                   <Card
                     imageSrc={otherAppsImage}
@@ -84,7 +81,6 @@ function App() {
                     description="Here, you'll find smaller projects focused on passenger transportation and mobility solutions. Each is designed to enhance efficiency and convenience for both passengers and operators while meeting public tender requirements and industry standards."
                     readMoreLink="/other-app" // Enlace para detalles
                     backgroundColor="var(--section-4-background)"
-                    textColor="var(--section-4-text)"
                   />
                 </div>
 
@@ -111,7 +107,7 @@ function App() {
                     tags={["GraphicDesign", "Coding"]}
                     description="In 2023 me and my friend Adela Bacardit signed up for “Stripart” contest, which is a contest for young artists. We won the first prize with this project and got the chance to exhibit it for a whole month in C.C. Guinardó."
                     readMoreLink="/teletext" // Enlace para detalles
-                    backgroundColor="var(--black)"
+                    backgroundColor="var(--section-5-background)"
                     textColor="var(--magenta)"
                     className={styles.customCard}
                   />
@@ -139,13 +135,14 @@ function App() {
                     link="https://www.linkedin.com/in/cristina-sanchez-mesa"
                     className={styles.iconCard}
                   />
+                  {/* Agrega el GIF debajo de las icon cards */}
+                  <img
+                    src={sioTurning}
+                    alt="Descripción del GIF"
+                    className={styles.contactGif} // Si quieres añadir estilos
+                  />
                 </div>
-                {/* Agrega el GIF debajo de las icon cards */}
-                <img
-                  src={sioTurning}
-                  alt="Descripción del GIF"
-                  className={styles.contactGif} // Si quieres añadir estilos
-                />
+
                 <div className={styles.headerLineContainer}>
                   <hr className={styles.headerLine} />
                 </div>

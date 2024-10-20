@@ -8,7 +8,7 @@
 
 :root {
   --text-color: #433434;
-  --black: #000000;
+  --black: #433434;
   --magenta: #ff00ff;
   --secondary-text-color: #ee6969;
   --background-color: #f2ebeb;
@@ -24,6 +24,7 @@
   --grey: #e3e3e3;
   --white: #ffffff;
   --green2: #8aae98;
+  --green3: #7efdb0;
 
   --section-1-background: #7770c0;
   --section-1-text: #ecb8fd;
@@ -31,46 +32,91 @@
   --section-2-background: #199e8e;
   --section-2-text: #ace8d5;
 
-  --section-3-background: #ebad3b;
+  --section-3-background: #c5a66c;
   --section-3-text: #fcfdd8;
 
   --section-4-background: #729fdb;
   --section-4-text: #cddff8;
 
+  --section-5-background: #000000;
+
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Fraunces", serif;
 }
-
 h1 {
   font-weight: bold;
-  font-size: 49px;
+  font-size: 49px; /* Tamaño de fuente para h1 */
 }
 
 h2 {
   font-family: var(--font-secondary);
   font-weight: bold;
-  font-size: 39px;
+  font-size: 35px; /* Tamaño de fuente para h2 */
 }
 
 h6 {
   font-family: var(--font-primary);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 20px; /* Tamaño de fuente para h6 */
 }
 
 a {
   font-family: var(--font-primary);
   font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
+  font-size: 20px; /* Tamaño de fuente para enlaces */
 }
 
 body {
   font-family: var(--font-primary);
   font-weight: 500; /* Medium */
-  font-size: 18px;
+  font-size: 18px; /* Tamaño de fuente del cuerpo */
   margin: 0;
   background-color: var(--background-color);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px; /* Tamaño reducido para pantallas medianas */
+  }
+
+  h2 {
+    font-size: 28px; /* Tamaño reducido para pantallas medianas */
+  }
+
+  h6 {
+    font-size: 18px; /* Tamaño reducido para pantallas medianas */
+  }
+
+  a {
+    font-size: 18px; /* Tamaño reducido para pantallas medianas */
+  }
+
+  body {
+    font-size: 16px; /* Tamaño reducido para pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px; /* Tamaño aún más pequeño para pantallas pequeñas */
+  }
+
+  h2 {
+    font-size: 24px; /* Tamaño aún más pequeño para pantallas pequeñas */
+  }
+
+  h6 {
+    font-size: 16px; /* Tamaño aún más pequeño para pantallas pequeñas */
+  }
+
+  a {
+    font-size: 16px; /* Tamaño aún más pequeño para pantallas pequeñas */
+  }
+
+  body {
+    font-size: 14px; /* Tamaño aún más pequeño para pantallas pequeñas */
+  }
 }
 
 /* Variables para un tema oscuro (opcional) */

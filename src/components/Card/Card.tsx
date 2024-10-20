@@ -10,7 +10,6 @@ interface CardProps {
   description: string;
   readMoreLink: string;
   backgroundColor: string;
-  textColor: string;
   className?: string; // Agrega el prop para la clase
 }
 
@@ -21,7 +20,6 @@ const Card: React.FC<CardProps> = ({
   description,
   readMoreLink,
   backgroundColor,
-  textColor,
   className, // Agrega el className aquí
 }) => {
   return (
@@ -30,7 +28,7 @@ const Card: React.FC<CardProps> = ({
       <div className={styles.cardLeft}>
         <img src={imageSrc} alt={title} className={styles.cardImage} />
       </div>
-      <div className={styles.cardRight} style={{ color: textColor }}>
+      <div className={styles.cardRight}>
         <h1 className={styles.cardTitle}>{title}</h1>
         <p className={styles.cardDescription}>{description}</p>
         <div className={styles.cardTags}>

@@ -5,7 +5,6 @@
   width: 100%;
   margin-bottom: 20px;
 }
-
 .dottedLine {
   border: none;
   border-top: 1px dotted #ccc; /* Cambia el color y el estilo según sea necesario */
@@ -35,29 +34,9 @@
   width: 50%;
 }
 
-/* Estilos de texto */
 .descriptionLayout h2 {
   color: var(--secondary-text-color);
   margin-top: 0px;
-  font-size: 1.5rem; /* Tamaño de fuente para h2 */
-}
-
-/* Estilos para párrafos */
-p {
-  margin: 10px 0; /* Espacio vertical entre párrafos */
-  font-size: 1rem; /* Tamaño de fuente de los párrafos */
-  line-height: 1.5; /* Espaciado entre líneas para mayor legibilidad */
-}
-
-/* Estilos para listas */
-ul {
-  padding-left: 20px; /* Espacio a la izquierda para las listas */
-  margin: 10px 0; /* Espacio vertical */
-}
-
-li {
-  margin: 5px 0; /* Espacio vertical entre los elementos de la lista */
-  font-size: 1rem; /* Tamaño de fuente de los elementos de lista */
 }
 
 /* Media Queries */
@@ -69,30 +48,17 @@ li {
 
 @media (max-width: 768px) {
   .descriptionLayout {
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-    gap: 20px; /* Espacio reducido entre columnas */
+    flex-direction: column;
+    gap: 20px;
   }
 
   .leftColumnIcons,
   .rightColumn {
-    width: 100%; /* Ambas columnas ocupan el 100% del ancho */
+    width: 100%; /* Se ajusta a pantalla completa en pantallas más pequeñas */
   }
 
   .iconRow {
-    justify-content: center; /* Centrar los íconos */
-  }
-
-  /* Ajustes de tamaño de fuente */
-  .descriptionLayout h2 {
-    font-size: 1.3rem; /* Tamaño de fuente más pequeño en pantallas medianas */
-  }
-
-  p {
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño para párrafos */
-  }
-
-  li {
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño para listas */
+    justify-content: center; /* Centrar los iconos */
   }
 }
 
@@ -100,18 +66,5 @@ li {
   .icon {
     width: 40px;
     height: 40px;
-  }
-
-  /* Ajustes de tamaño de fuente */
-  .descriptionLayout h2 {
-    font-size: 1.1rem; /* Tamaño de fuente aún más pequeño */
-  }
-
-  p {
-    font-size: 0.8rem; /* Tamaño de fuente más pequeño para párrafos */
-  }
-
-  li {
-    font-size: 0.8rem; /* Tamaño de fuente más pequeño para listas */
   }
 }

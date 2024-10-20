@@ -15,27 +15,15 @@
 }
 
 .iconCardTitle {
+  color: var(--text-color);
   margin: 10px;
-  font-size: 29px;
-  font-family: "Fraunces";
   text-decoration: none;
-  color: var(
-    --secondary-text-color
-  ); /* Cambia el color del texto según el tema */
 }
 @media (max-width: 768px) {
   .iconCard {
     flex-direction: column;
   }
 
-  .iconCardTitle {
-    font-size: 18px;
-    font-family: "Fraunces";
-    text-decoration: none;
-    color: var(
-      --secondary-text-color
-    ); /* Cambia el color del texto según el tema */
-  }
   .icon {
     margin-top: 10px;
     width: 30px;
