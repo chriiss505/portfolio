@@ -1,0 +1,28 @@
+.carouselContainer {
+  position: relative; /* Necesario para posicionar las flechas */
+  max-width: 100%; /* Asegúrate de que el contenedor no exceda el ancho de la imagen */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  display: flex; /* Usamos flexbox para centrar los elementos */
+  flex-direction: column; /* Disposición en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+}
+
+.carouselImage {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  max-width: 700px; /* Ancho máximo para la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  aspect-ratio: 16 / 9; /* Proporción 16:9 para las imágenes */
+}
+
+.arrowsContainer {
+  width: 100%; /* Asegura que el contenedor de las flechas ocupe todo el ancho */
+  max-width: 700px; /* Ancho máximo para el contenedor de flechas */
+  display: flex; /* Usamos flexbox para alinear las flechas */
+  justify-content: space-between; /* Espacia las flechas a las esquinas */
+}
+
+.arrow {
+  background: none; /* Sin fondo */
+  border: none; /* Sin bordes */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}

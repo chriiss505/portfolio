@@ -26,6 +26,7 @@ import arrowRight from "../../assets/images/right.svg";
 import arrowLeft from "../../assets/images/left.svg";
 
 import handw from "../../assets/images/handw.svg";
+import brillo from "../../assets/images/brillo.svg";
 
 const OnboardPID: React.FC = () => {
   return (
@@ -199,7 +200,7 @@ const OnboardPID: React.FC = () => {
         <DescriptionLayout
           title="Challenges and Solutions:"
           titleColor="var(--section-2-title)"
-          icons={[{ src: sakura, alt: "Icon 10" }]}
+          icons={[{ src: handw, alt: "Icon 10" }]}
           paragraph={
             <>
               <ul>
@@ -228,7 +229,7 @@ const OnboardPID: React.FC = () => {
         <DescriptionLayout
           title="Design Considerations:"
           titleColor="var(--section-2-title)"
-          icons={[{ src: handw, alt: "Icon 12" }]}
+          icons={[{ src: brillo, alt: "Icon 12" }]}
           paragraph={
             <>
               <p>

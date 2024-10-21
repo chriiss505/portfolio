@@ -12,7 +12,7 @@
   --magenta: #ff00ff;
   --secondary-text-color: #ee6969;
   --background-color: #f2ebeb;
-  --background-strong: #d9d3d3;
+  --background-strong: ##f3f3f3;
   --lavander: #ecb8fd;
   --turquoise: #ace8d5;
   --yellow: #e6e8ac;
@@ -37,6 +37,7 @@
 
   --section-3-background: #c5a66c;
   --section-3-text: #fcfdd8;
+  --section-3-title: #ae9362;
 
   --section-4-background: #508ba5;
   --section-4-text: #cddff8;
