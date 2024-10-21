@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollToTop from "./components/ScrollToTop"; // Asegúrate de ajustar la ruta según tu estructura de carpetas
+
 import { BrowserRouter, Route, Routes } from "react-router-dom"; // Asegúrate de importar Routes
 import NavBar from "./components/NavBar/NavBar";
 import Card from "./components/Card/Card";
@@ -35,6 +37,7 @@ function App() {
     <BrowserRouter basename="/portfolio/">
       <div>
         <NavBar />
+        <ScrollToTop />
         <Routes>
           <Route
             path="/"
