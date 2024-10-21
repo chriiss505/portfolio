@@ -112,6 +112,7 @@ const OnboardPID: React.FC = () => {
             </ul>
           }
         />
+        <hr className={styles.separator} />
 
         <DescriptionLayout
           title="Architecture and Data Management:"
@@ -160,6 +161,7 @@ const OnboardPID: React.FC = () => {
             </>
           }
         />
+        <hr className={styles.separator} />
 
         <DescriptionLayout
           title="Key Features:"
@@ -192,6 +194,7 @@ const OnboardPID: React.FC = () => {
             </>
           }
         />
+        <hr className={styles.separator} />
 
         <DescriptionLayout
           title="Challenges and Solutions:"
@@ -220,6 +223,7 @@ const OnboardPID: React.FC = () => {
             </>
           }
         />
+        <hr className={styles.separator} />
 
         <DescriptionLayout
           title="Design Considerations:"

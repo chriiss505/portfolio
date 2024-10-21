@@ -10,7 +10,7 @@
 }
 .contactGif {
   width: 100%; /* Ajusta el tamaño si es necesario */
-  max-width: 100px; /* Por ejemplo, para limitar su tamaño máximo */
+  max-width: 150px; /* Por ejemplo, para limitar su tamaño máximo */
 }
 
 .customIconCard {
