@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "predeploy": "npm run dist",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "tsc && vite dist"
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
