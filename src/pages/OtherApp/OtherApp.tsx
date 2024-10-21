@@ -1,81 +1,179 @@
 import React from "react";
 import styles from "./OtherApp.module.css";
 import Tag from "../../components/Tags/Tag"; // Asumiendo que tienes un componente Tag para las etiquetas
+import DescriptionLayout from "../../components/DescriptionLayout/DescriptionLayout";
+import Icon from "../../components/Icons/Icon";
+import Carousel from "../../components/Carousel/Carousel"; // Asegúrate de la ruta correcta
+import VideoCard from "../../components/VideoCard/VideoCard";
+import FleetManagementCard from "../../components/FleetManagementCard/FleetManagementCard";
+
+/*--------------picture------------*/
+
+import mainPicture from "../../assets/images/its.png";
+
+import sunmi from "../../assets/images/sunmi1.png";
+import waysion from "../../assets/images/waysion.png";
+import campapp from "../../assets/images/campapp.png";
+import image4 from "../../assets/images/its_4.png";
+
+/*--------------icons------------*/
+
+import illustrator from "../../assets/images/ai_logo.png";
+import photoshop from "../../assets/images/ps_logo.png";
+import androidStudio from "../../assets/images/android_logo.png";
+import openWeather from "../../assets/images/weather_api.png";
+import figma from "../../assets/images/figma_logo.png";
+import test from "../../assets/images/logo_test.png";
+import brain from "../../assets/images/logo_brain.png";
+import define from "../../assets/images/logo_define.png";
+import heart from "../../assets/images/logo_heart.png";
+import pencil from "../../assets/images/logo_pencil.png";
+
+/*--------------svg------------*/
+import computer from "../../assets/images/computer_v2.svg";
+import keyboard from "../../assets/images/keyboard.svg";
+import sakura from "../../assets/images/sakura.svg";
+import arrowRight from "../../assets/images/right.svg";
+import arrowLeft from "../../assets/images/left.svg";
+
+import handw from "../../assets/images/handw.svg";
+import brillo from "../../assets/images/brillo.svg";
 
 const OtherApp: React.FC = () => {
   return (
     <div className={styles.pageContainer}>
       {/* Primera Card */}
       <div
-        className={`${styles.titleCard} ${styles.lilaBackground} ${styles.card}`}
+        className={`${styles.titleCard} ${styles.backgroundColor} ${styles.card}`}
       >
-        <h1 className={styles.centerText}>Project Title</h1>
+        <h1 className={styles.centerText}>Other Apps</h1>
         <div className={styles.tagsContainer}>
           <Tag name="UI" />
           <Tag name="UX" />
-          <Tag name="Graphic Design" />
+          <Tag name="GraphicDesign" />
           <Tag name="Coding" />
         </div>
       </div>
 
-      {/* Segunda Card */}
-      <div className={`${styles.card} ${styles.lilaBackground}`}>
+      <div className={`${styles.card} ${styles.backgroundColor}`}>
+        <div className={styles.singleColumnLayout}>
+          {" "}
+          {/* Cambia el layout a una sola columna */}
+          <h2>Projects:</h2>
+          <p>
+            Here, you'll find a collection of smaller projects, primarily
+            focused on passenger transportation and mobility solutions. Each
+            project is designed to improve the efficiency, convenience, and
+            experience for both passengers and operators. These solutions are
+            also developed to meet the specific requirements of public tenders,
+            ensuring compliance with industry standards and regulations
+          </p>
+        </div>
+      </div>
+
+      {/* primera Card */}
+      <div className={`${styles.card} ${styles.whiteBackground}`}>
         <div className={styles.twoColumnLayout}>
-          <div className={styles.leftColumn}>
-            <h2>Project Title</h2>
+          <div className={styles.leftColumnProject}>
+            <h2>Campapp:</h2>
             <p>
-              This is the description of the project. It explains the details of
-              the project.
+              <strong>Goals: </strong>
+              The app enables drivers to view their assigned vehicle, its
+              location, and their scheduled shifts for the day. It was required
+              to be bilingual, supporting both English and Māori, and optimized
+              for the T2 mini device.
+            </p>
+
+            <p>
+              <strong>Clients: </strong>
+              Greater Wellington.
+            </p>
+
+            <p>
+              <strong>My role: </strong>I designed the app with UX principles in
+              mind and developed the frontend using Android Studio.
             </p>
           </div>
-          <div className={styles.rightColumn}>
-            <img src="https://via.placeholder.com/200" alt="Project Image" />
+          <div className={styles.rightColumnProject}>
+            <img
+              src={campapp}
+              className={styles.border10}
+              alt="Project Image"
+            />
           </div>
         </div>
       </div>
 
-      {/* Tercera Card */}
+      {/* Segunda Card */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <div key={index} className={styles.twoColumnLayout}>
-            <div className={styles.leftColumnIcons}>
-              <h2>Skills</h2>
-              <div className={styles.iconRow}>
-                <img src="https://via.placeholder.com/50" alt="Icon 1" />
-                <img src="https://via.placeholder.com/50" alt="Icon 2" />
-                <img src="https://via.placeholder.com/50" alt="Icon 3" />
-                <img src="https://via.placeholder.com/50" alt="Icon 4" />
-                <img src="https://via.placeholder.com/50" alt="Icon 5" />
-              </div>
-            </div>
-            <div className={styles.rightColumn}>
-              <p>This is a paragraph describing the skill set in detail.</p>
-            </div>
-          </div>
-        ))}
-      </div>
+        <div className={styles.twoColumnLayout}>
+          <div className={styles.leftColumnProject}>
+            <h2>Ticketing app: </h2>
+            <p>
+              <strong>Goals: </strong>
+              The app allows bus drivers to validate tickets, check ticket
+              validity, and sell tickets using either cash or credit card. It
+              was developed to run on two devices: Sunmi T2 Mini and Sunmi P2
+              Pro.
+            </p>
 
-      {/* Cuarta Card */}
-      <div className={`${styles.card} ${styles.whiteBackground}`}>
-        <div className={styles.twoThirdsLayout}>
-          <div className={styles.leftColumn}>
-            <h2>Additional Info</h2>
-            <img src="https://via.placeholder.com/50" alt="Icon 1" />
-            <img src="https://via.placeholder.com/50" alt="Icon 2" />
+            <p>
+              <strong>Clients: </strong>
+              Aerobus, Andorra Government, Fisersa, Monbus.
+            </p>
+
+            <p>
+              <strong>My role: </strong>
+              Designing components and user flows, applying both UX and UI
+              principles.
+            </p>
+
+            <p>
+              <strong>Featured in:</strong>
+              <a
+                href="https://www.blog.sunmi.tech/partners/mybus-smart-mobility-for-smart-cities/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sunmi Blog
+              </a>
+            </p>
           </div>
-          <div className={styles.carousel}>
-            <div className={styles.scrollContainer}>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <img
-                  key={index}
-                  src={`https://via.placeholder.com/300?text=Image+${
-                    index + 1
-                  }`}
-                  alt={`Carousel Image ${index + 1}`}
-                  className={styles.carouselImage}
-                />
-              ))}
-            </div>
+          <div className={styles.rightColumnProject}>
+            <img src={sunmi} className={styles.border10} alt="Project Image" />
+          </div>
+        </div>
+      </div>
+      {/* tercera Card */}
+      <div className={`${styles.card} ${styles.whiteBackground}`}>
+        <div className={styles.twoColumnLayout}>
+          <div className={styles.leftColumnProject}>
+            <h2>Driver device:</h2>
+            <p>
+              <strong>Goals: </strong>
+              The app assists drivers by showing whether they are adhering to
+              the schedule, displaying upcoming trips, passenger count, the next
+              stop, and their location on a map. It was required to fit specific
+              device constraints.
+            </p>
+
+            <p>
+              <strong>Clients: </strong>
+              Bus agencies around Barcelona.
+            </p>
+
+            <p>
+              <strong>My role: </strong>
+              Redesigned the app to fit various devices and customized the UI
+              for different clients.
+            </p>
+          </div>
+          <div className={styles.rightColumnProject}>
+            <img
+              src={waysion}
+              className={styles.border10}
+              alt="Project Image"
+            />
           </div>
         </div>
       </div>

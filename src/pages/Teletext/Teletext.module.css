@@ -1,0 +1,176 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Centrado vertical */
+  padding: 0 60px;
+  background-color: var(--background-color);
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+.singleColumnLayout {
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Disposición en columna */
+  padding: 20px; /* Espaciado interno */
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 1200px;
+  background-color: black;
+}
+
+.border10 {
+  border-radius: 10px;
+}
+
+.titleCard {
+  margin-top: 130px;
+}
+
+.titleCard h1 {
+  margin: 0px;
+  color: var(--magenta);
+  font-family: "EuropeanTeletext";
+}
+.teletextFont {
+  font-family: "EuropeanTeletext" !important;
+}
+.backgroundColor {
+  font-family: "EuropeanTeletext" !important;
+  color: var(--magenta);
+  text-align: center;
+  background-color: var(--section-5-background); /* Lila */
+}
+
+.whiteBackground {
+  border: 2px solid var(--black);
+  color: var(--black);
+  background-color: var(--background-strong); /* Blanco */
+}
+.whiteBackground h2 {
+  color: var(--magenta);
+}
+
+.leftColumnProject {
+  width: 70%;
+}
+
+.rightColumnProject {
+  width: 30%;
+  display: flex; /* Usa flexbox para centrar el contenido */
+  flex-direction: column; /* Asegúrate de que los elementos se coloquen en una columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+}
+
+.rightColumnProject img {
+  width: 100%;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.tagsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.twoColumnLayout {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftColumn {
+  width: 30%;
+}
+.leftColumn h2 {
+  color: var(--section-4-title);
+}
+
+.rightColumn {
+  width: 40%;
+}
+
+.leftColumnIcons {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconRow {
+  display: flex;
+  gap: 10px;
+}
+
+.separator {
+  border: none;
+  border-top: 1px dashed var(--section-4-background); /* Cambia el color según sea necesario */
+  margin: 20px 0; /* Espaciado alrededor de la línea */
+}
+/* MEDIA QUERIES */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 0 30px;
+  }
+
+  .leftColumnProject,
+  .rightColumnProject {
+    width: 100%;
+  }
+
+  .twoColumnLayout,
+  .twoThirdsLayout {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .leftColumn,
+  .rightColumn,
+  .leftColumnIcons {
+    width: 100%;
+  }
+
+  .iconRow {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tagsContainer {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+  .leftColumnProject,
+  .rightColumnProject {
+    width: 100%;
+  }
+
+  .twoColumnLayout,
+  .twoThirdsLayout {
+    flex-direction: column;
+  }
+
+  .leftColumn,
+  .rightColumn,
+  .leftColumnIcons {
+    width: 100%;
+  }
+
+  .iconRow {
+    flex-wrap: wrap;
+  }
+}

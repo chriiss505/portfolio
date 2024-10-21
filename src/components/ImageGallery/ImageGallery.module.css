@@ -1,0 +1,37 @@
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 16px; /* Espacio entre las imágenes */
+}
+
+.imageContainer {
+  overflow: hidden; /* Oculta la parte de la imagen que sale del contenedor */
+  position: relative; /* Para el efecto de hover */
+}
+
+.image {
+  width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.image:hover {
+  transform: scale(1.05); /* Amplía la imagen un poco al hacer hover */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .galleryContainer {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .galleryContainer {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+  }
+}

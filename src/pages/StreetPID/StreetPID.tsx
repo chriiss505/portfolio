@@ -68,6 +68,25 @@ const StreetPID: React.FC = () => {
             <p>
               <strong>My role:</strong> Designing and coding the frontend.
             </p>
+            <p>
+              <strong>Featured in: </strong>
+              <a
+                href="https://www.diaridesabadell.com/2023/03/30/autobusos-tus-sabadell/"
+                target="_blank"
+              >
+                El Diari de Sabadell
+              </a>
+            </p>
+
+            <p>
+              <strong>Video: </strong>
+              <a
+                href="https://www.instagram.com/reel/C3GR5nEMAaX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                target="_blank"
+              >
+                Sabadell Major using the system
+              </a>
+            </p>
           </div>
           <div className={styles.rightColumnProject}>
             <img

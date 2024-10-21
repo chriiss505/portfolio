@@ -12,7 +12,7 @@
   --magenta: #ff00ff;
   --secondary-text-color: #ee6969;
   --background-color: #f2ebeb;
-  --background-strong: ##f3f3f3;
+  --background-strong: #dbd3d3;
   --lavander: #ecb8fd;
   --turquoise: #ace8d5;
   --yellow: #e6e8ac;
@@ -40,6 +40,8 @@
   --section-3-title: #ae9362;
 
   --section-4-background: #508ba5;
+  --section-4-title: #508ba5;
+
   --section-4-text: #cddff8;
 
   --section-5-background: #000000;
@@ -67,7 +69,8 @@ h6 {
 a {
   font-family: var(--font-primary);
   font-weight: bold;
-  font-size: 20px; /* Tamaño de fuente para enlaces */
+  color: var(--secondary-text-color);
+  font-size: 18px; /* Tamaño de fuente para enlaces */
 }
 
 body {
@@ -76,6 +79,9 @@ body {
   font-size: 18px; /* Tamaño de fuente del cuerpo */
   margin: 0;
   background-color: var(--background-color);
+}
+p {
+  text-align: justify;
 }
 
 /* Estilos Responsivos */
@@ -93,7 +99,7 @@ body {
   }
 
   a {
-    font-size: 18px; /* Tamaño reducido para pantallas medianas */
+    font-size: 16px; /* Tamaño reducido para pantallas medianas */
   }
 
   body {
@@ -115,7 +121,7 @@ body {
   }
 
   a {
-    font-size: 16px; /* Tamaño aún más pequeño para pantallas pequeñas */
+    font-size: 14px; /* Tamaño aún más pequeño para pantallas pequeñas */
   }
 
   body {

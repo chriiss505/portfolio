@@ -32,6 +32,7 @@
 
 .footerText {
   color: var(--text-color);
+  text-align: center;
 }
 @media (max-width: 768px) {
   .footerNav a {

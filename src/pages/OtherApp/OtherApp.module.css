@@ -6,8 +6,14 @@
   min-height: 100vh; /* Centrado vertical */
   padding: 0 60px;
   background-color: var(--background-color);
-  overflow-x: auto;
+  overflow-x: clip;
   max-width: 100%;
+}
+
+.singleColumnLayout {
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Disposición en columna */
+  padding: 20px; /* Espaciado interno */
 }
 
 .card {
@@ -17,21 +23,49 @@
   border-radius: 10px;
   max-width: 1200px;
 }
+
+.border10 {
+  border-radius: 10px;
+}
+
 .titleCard {
   margin-top: 130px;
 }
 
 .titleCard h1 {
   margin: 0px;
-  color: var(--lavander);
+  color: var(--white);
 }
 
-.lilaBackground {
-  background-color: var(--violet); /* Lila */
+.backgroundColor {
+  color: var(--white);
+  text-align: center;
+  background-color: var(--section-4-background); /* Lila */
 }
 
 .whiteBackground {
+  border: 2px solid var(--black);
+  color: var(--black);
   background-color: var(--background-strong); /* Blanco */
+}
+.whiteBackground h2 {
+  color: var(--section-4-title);
+}
+
+.leftColumnProject {
+  width: 70%;
+}
+
+.rightColumnProject {
+  width: 30%;
+  display: flex; /* Usa flexbox para centrar el contenido */
+  flex-direction: column; /* Asegúrate de que los elementos se coloquen en una columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+}
+
+.rightColumnProject img {
+  width: 100%;
 }
 
 .centerText {
@@ -46,12 +80,16 @@
 }
 
 .twoColumnLayout {
+  gap: 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .leftColumn {
-  width: 60%;
+  width: 30%;
+}
+.leftColumn h2 {
+  color: var(--section-4-title);
 }
 
 .rightColumn {
@@ -69,35 +107,66 @@
   gap: 10px;
 }
 
-.carousel {
-  overflow-x: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.separator {
+  border: none;
+  border-top: 1px dashed var(--section-4-background); /* Cambia el color según sea necesario */
+  margin: 20px 0; /* Espaciado alrededor de la línea */
+}
+/* MEDIA QUERIES */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 0 30px;
+  }
+
+  .leftColumnProject,
+  .rightColumnProject {
+    width: 100%;
+  }
+
+  .twoColumnLayout,
+  .twoThirdsLayout {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .leftColumn,
+  .rightColumn,
+  .leftColumnIcons {
+    width: 100%;
+  }
+
+  .iconRow {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tagsContainer {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
 
-.scrollContainer {
-  display: flex;
-  gap: 20px;
-}
+/* Pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+  .leftColumnProject,
+  .rightColumnProject {
+    width: 100%;
+  }
 
-.carouselImage {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  scroll-snap-align: center;
-}
+  .twoColumnLayout,
+  .twoThirdsLayout {
+    flex-direction: column;
+  }
 
-.twoThirdsLayout {
-  display: flex;
-  justify-content: space-between;
-}
+  .leftColumn,
+  .rightColumn,
+  .leftColumnIcons {
+    width: 100%;
+  }
 
-.leftColumn {
-  width: 30%;
-}
-
-.rightColumn {
-  width: 70%;
+  .iconRow {
+    flex-wrap: wrap;
+  }
 }
