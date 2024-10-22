@@ -1,120 +1,39 @@
-/* Imagen del carrusel */
-.carouselImage {
-  width: 100%; /* La imagen ocupa el 100% del contenedor en móviles */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Transición suave */
-}
-
-.carouselImage:hover {
-  transform: scale(1.1); /* Efecto al hacer hover */
-}
-.arrowsContainer {
-  flex-direction: row;
-}
-/* Estilo del modal */
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modalContent {
-  background: white;
+/* Carousel.module.css */
+.card {
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
 }
 
-.modalContent img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Layout general */
-.twoThirdsLayout {
+.carouselHeader {
   display: flex;
-  justify-content: space-between;
-  align-items: center; /* Centrar verticalmente los elementos */
-  flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
-}
-
-/* Columna izquierda para flechas y título */
-.leftColumn {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.leftColumn h2 {
+  justify-content: center;
   margin-bottom: 20px;
 }
 
-/* Carrusel */
 .carousel {
-  position: relative;
-  width: 70%; /* Ajustar el ancho para las imágenes en pantallas grandes */
-  overflow: hidden; /* Ocultar las imágenes que no están visibles */
+  overflow-x: auto;
+  display: flex;
+  padding-bottom: 10px;
 }
 
 .scrollContainer {
   display: flex;
-  transition: transform 0.3s ease-in-out; /* Transición suave al hacer scroll */
-  gap: 20px;
-  width: 100%;
+  gap: 15px;
 }
 
-/* Ajustar para que cada imagen ocupe el 100% del ancho del carrusel */
-.scrollContainer img {
-  flex-shrink: 0;
-  width: 100%; /* Cada imagen ocupa el 100% en pantallas pequeñas */
-  max-width: 300px; /* Limitar el ancho máximo */
-  height: 300px;
-  object-fit: cover; /* Ajusta la imagen para que mantenga su proporción */
+.carouselImage {
+  max-width: 400px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Media Queries para diferentes tamaños de pantalla */
+.carouselImage:hover {
+  transform: scale(1.05); /* Se agranda un poco al hacer hover */
+}
 
-/* Tablets y pantallas medianas */
+/* Responsive */
 @media (max-width: 768px) {
-  .carousel {
-    width: 100%; /* Carrusel ocupa el 100% en pantallas medianas */
-  }
-
-  .leftColumn {
-    width: 15%; /* Columna de flechas se ajusta */
-  }
-
-  .scrollContainer img {
-    width: 100%;
-    max-width: 250px; /* Las imágenes son más pequeñas en pantallas medianas */
-  }
-}
-
-/* Móviles y pantallas pequeñas */
-@media (max-width: 480px) {
-  .twoThirdsLayout {
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-  }
-
-  .leftColumn {
-    width: 100%; /* La columna de flechas toma todo el ancho */
-    margin-bottom: 20px; /* Espacio entre las flechas y el carrusel */
-  }
-
-  .carousel {
-    width: 100%; /* El carrusel ocupa todo el ancho */
-  }
-
-  .scrollContainer img {
-    max-width: 200px; /* Tamaño más pequeño en pantallas pequeñas */
+  .carouselImage {
+    max-width: 250px;
   }
 }

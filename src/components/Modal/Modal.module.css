@@ -16,7 +16,7 @@
 
 /* Estilos para la ventana del modal */
 .modalContent {
-  background-color: white;
+  background-color: var(--background-color);
   border-radius: 10px;
   padding: 20px;
   width: 80%; /* Ajusta según lo necesites */
@@ -25,6 +25,7 @@
   animation: fadeIn 0.3s ease-in-out; /* Efecto de fade-in */
   z-index: 1001;
   position: relative;
+  text-align: right;
   overflow: hidden; /* Asegura que el contenido no sobresalga */
 }
 
@@ -42,20 +43,24 @@
 
 /* Botón para cerrar el modal */
 .closeButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333; /* Color del icono de cerrar */
-  transition: color 0.3s ease;
+  font-family: "Poppins";
+  text-decoration: none; /* Sin subrayado en el texto */
+  color: var(--text-color); /* Texto en blanco */
+  background-color: var(--white);
+  font-size: 1rem; /* Tamaño de la fuente */
+  padding: 5px 20px; /* Espaciado interno para el botón */
+  border-radius: 5px; /* Bordes muy redondeados */
+  transition: background-color 0s; /* Transición suave para el color de fondo */
+  display: inline-block; /* Asegura que el botón se ajuste al contenido */
+  box-shadow: 5px 5px 0px var(--black); /* Sombra con posición X 4, Y 4, sin blur, color #c0c0c0 */
+  stroke-width: 3px;
+  border: 2px solid var(--text-color);
 }
 
 /* Efecto hover para el botón de cerrar */
 .closeButton:hover {
-  color: #f44336; /* Color al hacer hover (rojo claro) */
+  background-color: var(--white); /* Color de fondo al pasar el mouse */
+  box-shadow: 6px 6px 0px var(--green2); /* Sombra con posición X 4, Y 4, sin blur, color #c0c0c0 */
 }
 
 .modalImage {
@@ -64,6 +69,7 @@
   max-height: 80vh; /* Asegura que la imagen nunca exceda la altura de la pantalla */
   object-fit: contain; /* Ajusta la imagen dentro del modal sin recortarla */
   transition: transform 0.3s ease;
+  margin-top: 10px;
 }
 
 /* RESPONSIVE DESIGN */
@@ -77,7 +83,7 @@
   }
 
   .closeButton {
-    font-size: 20px; /* Ajustar el tamaño del botón de cerrar */
+    font-size: 14px; /* Ajustar el tamaño del botón de cerrar */
   }
 }
 
@@ -90,7 +96,7 @@
   }
 
   .closeButton {
-    font-size: 18px; /* Reducir el tamaño del botón de cerrar */
+    font-size: 12px; /* Reducir el tamaño del botón de cerrar */
     top: 5px; /* Ajustar la posición en móviles */
     right: 5px;
   }

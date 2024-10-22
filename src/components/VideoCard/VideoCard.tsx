@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./VideoCard.module.css"; // Asegúrate de crear este archivo CSS
+import styles from "./VideoCard.module.css";
 
 interface VideoCardProps {
   title: string;
-  videoSrc: string; // URL del video
-  text: string; // Texto para mostrar en la columna derecha
+  videoSrc: string; // URL o ruta del video
+  text: string; // Texto para mostrar
 }
 
 const VideoCard: React.FC<VideoCardProps> = ({ title, videoSrc, text }) => {
@@ -16,14 +16,11 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, videoSrc, text }) => {
           <p className={styles.description}>{text}</p>
         </div>
         <div className={styles.videoContainer}>
-          <iframe
-            className={styles.video}
-            src={videoSrc}
-            title={title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {/* Usamos la etiqueta video para reproducir contenido local */}
+          <video className={styles.video} controls>
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>

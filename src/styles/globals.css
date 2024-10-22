@@ -10,7 +10,7 @@
   --text-color: #433434;
   --black: #433434;
   --magenta: #ff00ff;
-  --secondary-text-color: #ee6969;
+  --secondary-text-color: #573a3a;
   --background-color: #f2ebeb;
   --background-strong: #dbd3d3;
   --lavander: #ecb8fd;
@@ -76,7 +76,7 @@ a {
 body {
   font-family: var(--font-primary);
   font-weight: 500; /* Medium */
-  font-size: 18px; /* Tamaño de fuente del cuerpo */
+  font-size: 16px;
   margin: 0;
   background-color: var(--background-color);
 }

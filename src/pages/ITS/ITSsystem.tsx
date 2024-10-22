@@ -50,10 +50,8 @@ const ITSsystem: React.FC = () => {
       >
         <h1 className={styles.centerText}>ITS Web Managers</h1>
         <div className={styles.tagsContainer}>
-          <Tag name="UI" />
           <Tag name="UX" />
           <Tag name="GraphicDesign" />
-          <Tag name="Coding" />
         </div>
       </div>
 

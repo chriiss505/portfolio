@@ -129,7 +129,7 @@ const OtherApp: React.FC = () => {
             </p>
 
             <p>
-              <strong>Featured in:</strong>
+              <strong>Featured in: </strong>
               <a
                 href="https://www.blog.sunmi.tech/partners/mybus-smart-mobility-for-smart-cities/"
                 target="_blank"

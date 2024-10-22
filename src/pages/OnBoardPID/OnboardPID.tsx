@@ -24,9 +24,11 @@ import keyboard from "../../assets/images/keyboard.svg";
 import sakura from "../../assets/images/sakura.svg";
 import arrowRight from "../../assets/images/right.svg";
 import arrowLeft from "../../assets/images/left.svg";
-
 import handw from "../../assets/images/handw.svg";
 import brillo from "../../assets/images/brillo.svg";
+
+/**-------video------/ */
+import onboardVideo from "../../assets/videos/onboard.mp4"; // Ruta a tu video local
 
 const OnboardPID: React.FC = () => {
   return (
@@ -247,9 +249,9 @@ const OnboardPID: React.FC = () => {
       {/* Cuarta Card con el componente Carousel */}
       <div className={styles.videoCardContainer}>
         <VideoCard
-          title="My Amazing Video"
-          videoSrc="https://www.youtube.com/embed/your_video_id" // Cambia esto por tu video
-          text="This is a brief description of the video content, providing context and engaging the viewer."
+          title="Onboard PID Video"
+          videoSrc={onboardVideo}
+          text="This video showcases the real-time information system onboard an Aerobus, which connects central Barcelona with the airport. The flow begins with the bus departing from a stop, displaying connections. Next, all stops along the route are shown, with completed stops grayed out. The screen then splits to display the current time, followed by flight connections. Informative images and videos are presented while continuously displaying the upcoming stop, ensuring passengers stay informed throughout the journey."
         />
       </div>
     </div>

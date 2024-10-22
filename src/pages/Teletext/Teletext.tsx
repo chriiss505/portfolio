@@ -47,8 +47,6 @@ const Teletext: React.FC = () => {
       >
         <h1 className={styles.centerText}>Teletext</h1>
         <div className={styles.tagsContainer}>
-          <Tag name="UI" />
-          <Tag name="UX" />
           <Tag name="GraphicDesign" />
           <Tag name="Coding" />
         </div>
