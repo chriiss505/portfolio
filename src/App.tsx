@@ -34,7 +34,7 @@ import teletextImage from "./assets/images/teletexto.png";
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio/">
+    <BrowserRouter basename="/">
       <div>
         <NavBar />
         <ScrollToTop />
