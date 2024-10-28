@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Card.module.css"; // Importamos los estilos de Card como módulo
 import Button from "../Button/Button"; // Importa el componente Button
 import Tag from "../Tags/Tag";
+import { Translation, useTranslation } from "react-i18next";
 
 interface CardProps {
   imageSrc: string;
@@ -24,6 +25,7 @@ const Card: React.FC<CardProps> = ({
   textColor = "inherit", // Valor predeterminado
   className, // Agrega el className aquí
 }) => {
+  const { t } = useTranslation(); // Inicializa la función de traducción
   return (
     <div className={`${styles.card} ${className}`} style={{ backgroundColor }}>
       {/* Aplica el color de fondo dinámicamente */}
@@ -39,7 +41,7 @@ const Card: React.FC<CardProps> = ({
           ))}
         </div>
         <div className={styles.cardButton}>
-          <Button text="Read More" link={readMoreLink} />
+          <Button text={t("readMore")} link={readMoreLink} />
         </div>
       </div>
     </div>

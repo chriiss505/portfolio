@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollToTop from "./components/ScrollToTop"; // Asegúrate de ajustar la ruta según tu estructura de carpetas
-
+import { useTranslation } from "react-i18next";
 import { BrowserRouter, Route, Routes } from "react-router-dom"; // Asegúrate de importar Routes
 import NavBar from "./components/NavBar/NavBar";
 import Card from "./components/Card/Card";
@@ -26,18 +26,31 @@ import arrowDown from "./assets/images/down.svg";
 
 /*--------------images------------*/
 
-import streetPIDImage from "./assets/images/street_pid_1.png";
+import streetPIDImage from "./assets/images/street_pid_11.png";
 import onboardPIDImage from "./assets/images/screenin.png";
 import otherAppsImage from "./assets/images/waysion.png";
 import itsImage from "./assets/images/its.png";
 import teletextImage from "./assets/images/teletexto.png";
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: "en" | "es") => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <BrowserRouter>
       <div>
         <NavBar />
         <ScrollToTop />
+
+        {/* Botones para cambiar el idioma */}
+        <div className={styles.languageSwitcher}>
+          <button onClick={() => changeLanguage("en")}>English</button>
+          <button onClick={() => changeLanguage("es")}>Español</button>
+        </div>
+
         <Routes>
           <Route
             path="/"
@@ -49,41 +62,41 @@ function App() {
                     <hr className={styles.headerLine} />
                   </div>
                   <h1 className={styles.headerTitle} id="the-work">
-                    The Work
+                    {t("thework")} {/* Traducción del título */}
                   </h1>
                 </div>
                 <div className={styles.cardGrid}>
-                  {/* Agrega las tarjetas con sus respectivos enlaces de "Read More" */}
+                  {/* Tarjetas de trabajo con traducciones */}
                   <Card
                     imageSrc={streetPIDImage}
-                    title="Street PID’s APK"
+                    title={t("streetPidTitle")} // Títulos traducidos
                     tags={["UX", "UI", "Coding", "GraphicDesign"]}
-                    description="These Street PID’s (Public Information Displays) are placed at bus stops or transit areas to inform passengers of the next arrivals and other relevant information without user interaction."
-                    readMoreLink="/street-pid" // Enlace para detalles
+                    description={t("streetPidDescription")} // Descripción traducida
+                    readMoreLink="/street-pid"
                     backgroundColor="var(--section-1-background)"
                   />
                   <Card
                     imageSrc={onboardPIDImage}
-                    title="On Board PID’s APK"
+                    title={t("onboardPidTitle")}
                     tags={["UX", "UI", "Coding", "GraphicDesign"]}
-                    description="This onboard public information display app provides passengers with real-time updates on upcoming bus stops, destinations, connections to other public transport, and media content such as videos or images."
-                    readMoreLink="/onboard-pid" // Enlace para detalles
+                    description={t("onboardPidDescription")}
+                    readMoreLink="/onboard-pid"
                     backgroundColor="var(--section-2-background)"
                   />
                   <Card
                     imageSrc={itsImage}
-                    title="ITS Web Managers"
+                    title={t("itsWebManagersTitle")}
                     tags={["UX", "GraphicDesign"]}
-                    description="Intelligent Transportation Systems (ITS) allows to manage public transportation fleets in real-time. My role focused on UI/UX design, specifically prototyping and designing the interface to ensure it was intuitive for transit operators."
-                    readMoreLink="/its-system" // Enlace para detalles
+                    description={t("itsWebManagersDescription")}
+                    readMoreLink="/its-system"
                     backgroundColor="var(--section-3-background)"
                   />
                   <Card
                     imageSrc={otherAppsImage}
-                    title="Other Apps"
+                    title={t("otherAppsTitle")}
                     tags={["UX", "GraphicDesign"]}
-                    description="Here, you'll find smaller projects focused on passenger transportation and mobility solutions. Each is designed to enhance efficiency and convenience for both passengers and operators while meeting public tender requirements and industry standards."
-                    readMoreLink="/other-app" // Enlace para detalles
+                    description={t("otherAppsDescription")}
+                    readMoreLink="/other-app"
                     backgroundColor="var(--section-4-background)"
                   />
                 </div>
@@ -94,12 +107,12 @@ function App() {
                     <hr className={styles.headerLine} />
                   </div>
                   <h1 className={styles.headerTitle} id="about">
-                    About
+                    {t("about")} {/* Traducción de la sección */}
                   </h1>
                 </div>
                 <AboutCard />
                 <IconCard
-                  text="Extra project"
+                  text={t("extraProject")}
                   imgSrc={arrowDown}
                   rightImgSrc={arrowDown}
                   className={styles.customIconCard}
@@ -107,10 +120,10 @@ function App() {
                 <div className={styles.cardGrid}>
                   <Card
                     imageSrc={teletextImage}
-                    title="Teletext"
+                    title={t("teletextTitle")}
                     tags={["GraphicDesign", "Coding"]}
-                    description="In 2023 me and my friend Adela Bacardit signed up for “Stripart” contest, which is a contest for young artists. We won the first prize with this project and got the chance to exhibit it for a whole month in C.C. Guinardó."
-                    readMoreLink="/teletext" // Enlace para detalles
+                    description={t("teletextDescription")}
+                    readMoreLink="/teletext"
                     backgroundColor="var(--section-5-background)"
                     textColor="var(--magenta)"
                     className={styles.customCard}
@@ -123,7 +136,7 @@ function App() {
                     <hr className={styles.headerLine} />
                   </div>
                   <h1 className={styles.headerTitle} id="contact">
-                    Contact
+                    {t("contact")} {/* Traducción de la sección */}
                   </h1>
                 </div>
                 <div className={styles.contactSection}>
@@ -134,16 +147,15 @@ function App() {
                     className={styles.iconCard}
                   />
                   <IconCard
-                    text="LinkedIn: Cristina Sanchez"
+                    text={t("linkedIn")} // Traducción del texto de LinkedIn
                     imgSrc={linkedInIcon}
                     link="https://www.linkedin.com/in/cristina-sanchez-mesa"
                     className={styles.iconCard}
                   />
-                  {/* Agrega el GIF debajo de las icon cards */}
                   <img
                     src={sioTurning}
                     alt="Descripción del GIF"
-                    className={styles.contactGif} // Si quieres añadir estilos
+                    className={styles.contactGif}
                   />
                 </div>
 

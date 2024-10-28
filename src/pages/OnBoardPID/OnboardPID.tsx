@@ -1,17 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next"; // Asegúrate de tener i18next configurado
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
+
 import styles from "./OnBoardPID.module.css";
 import Tag from "../../components/Tags/Tag"; // Asumiendo que tienes un componente Tag para las etiquetas
 import DescriptionLayout from "../../components/DescriptionLayout/DescriptionLayout";
 import Icon from "../../components/Icons/Icon";
 import Carousel from "../../components/Carousel/Carousel"; // Asegúrate de la ruta correcta
-import VideoCard from "../../components/VideoCard/VideoCard";
+import VideoCard from "../../components/VideoCard/VideoCard"; // Asegúrate de la ruta correcta
 
 /*--------------picture------------*/
-
 import mainPicture from "../../assets/images/screenin.png";
 
 /*--------------icons------------*/
-
 import illustrator from "../../assets/images/ai_logo.png";
 import photoshop from "../../assets/images/ps_logo.png";
 import androidStudio from "../../assets/images/android_logo.png";
@@ -31,13 +32,19 @@ import brillo from "../../assets/images/brillo.svg";
 import onboardVideo from "../../assets/videos/onboard.mp4"; // Ruta a tu video local
 
 const OnboardPID: React.FC = () => {
+  const { t } = useTranslation(); // Inicializa la función de traducción
+
+  const navigate = useNavigate(); // Inicializa useNavigate
+
+  const goToPreviousProject = () => navigate("/street-pid");
+  const goToNextProject = () => navigate("/its-system");
   return (
     <div className={styles.pageContainer}>
       {/* Primera Card */}
       <div
         className={`${styles.titleCard} ${styles.backgroundColor} ${styles.card}`}
       >
-        <h1 className={styles.centerText}>On Board PID's APK</h1>
+        <h1 className={styles.centerText}>{t("OnBoardPID.title")}</h1>
         <div className={styles.tagsContainer}>
           <Tag name="UI" />
           <Tag name="UX" />
@@ -50,37 +57,27 @@ const OnboardPID: React.FC = () => {
       <div className={`${styles.card} ${styles.backgroundColor}`}>
         <div className={styles.twoColumnLayout}>
           <div className={styles.leftColumnProject}>
-            <h2>Project overview:</h2>
+            <h2>{t("OnBoardPID.projectOverview")}</h2>
             <p>
-              <strong>Goals:</strong>
+              <strong>{t("OnBoardPID.goals")}</strong>
             </p>
-            <p>
-              This onboard display app provides real-time information for
-              passengers inside buses, including upcoming stops, destinations,
-              connections to other public transport, and media content such as
-              videos or images. For buses heading to airports, the app also
-              displays upcoming flight information. The app can also handle
-              audio announcements to improve accessibility for passengers.
-            </p>
+            <p>{t("OnBoardPID.description")}</p>
 
             <p>
-              <strong>Clients:</strong>
+              <strong>{t("OnBoardPID.clients")}</strong>
             </p>
-            <p>
-              Transports Urbans de Sabadell, Govern d’Andorra, Monbus, Soler i
-              Sauret, Aerobus, Sarbus
-            </p>
+            <p>{t("OnBoardPID.clientsList")}</p>
 
             <p>
-              <strong>My role:</strong>
+              <strong>{t("OnBoardPID.myRole")}</strong>
             </p>
-            <p>Designing and coding frontend</p>
+            <p>{t("OnBoardPID.myRoleDescription")}</p>
           </div>
           <div className={styles.rightColumnProject}>
             <img
               src={mainPicture}
               className={styles.border10}
-              alt="Project Image"
+              alt={t("OnBoardPID.projectImageAlt")}
             />
           </div>
         </div>
@@ -89,28 +86,31 @@ const OnboardPID: React.FC = () => {
       {/* Tercera Card */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
-          title="Technologies and Tools Used:"
+          title={t("OnBoardPID.technologiesTitle")}
           titleColor="var(--section-2-title)"
           icons={[
-            { src: illustrator, alt: "Icon 1" },
-            { src: photoshop, alt: "Icon 2" },
-            { src: androidStudio, alt: "Icon 4" },
-            { src: figma, alt: "Icon 5" },
+            { src: illustrator, alt: t("OnBoardPID.icon1") },
+            { src: photoshop, alt: t("OnBoardPID.icon2") },
+            { src: androidStudio, alt: t("OnBoardPID.icon3") },
+            { src: figma, alt: t("OnBoardPID.icon4") },
           ]}
           paragraph={
             <ul>
               <li>
-                <strong>Development Environment:</strong> Android Studio
+                <strong>{t("OnBoardPID.developmentEnvironment")}</strong>{" "}
+                {t("OnBoardPID.androidStudio")}
               </li>
               <li>
-                <strong>Programming Languages:</strong> Java
+                <strong>{t("OnBoardPID.programmingLanguages")}</strong>{" "}
+                {t("OnBoardPID.java")}
               </li>
               <li>
-                <strong>Design Tools:</strong> Figma, Photoshop, Illustrator
+                <strong>{t("OnBoardPID.designTools")}</strong>{" "}
+                {t("OnBoardPID.figmaPhotoshopIllustrator")}
               </li>
               <li>
-                <strong>APIs:</strong> Real-time bus data for stops and routes,
-                AENA API for flight information, and media content integrations
+                <strong>{t("OnBoardPID.apis")}</strong>{" "}
+                {t("OnBoardPID.apisDescription")}
               </li>
             </ul>
           }
@@ -118,47 +118,40 @@ const OnboardPID: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="Architecture and Data Management:"
+          title={t("OnBoardPID.architectureTitle")}
           titleColor="var(--section-2-title)"
-          icons={[{ src: computer, alt: "Icon 6" }]}
+          icons={[{ src: computer, alt: t("OnBoardPID.icon5") }]}
           paragraph={
             <>
-              <p>
-                The app is designed to manage multiple data streams efficiently
-                with automatic updates.
-              </p>
+              <p>{t("OnBoardPID.dataManagementDescription")}</p>
 
               <ul>
                 <li>
-                  <strong>Data Sources:</strong>
+                  <strong>{t("OnBoardPID.dataSources")}</strong>
                 </li>
                 <ul>
                   <li>
-                    <strong>Bus Data & Media:</strong> Fetched from the
-                    company’s database, populated by its intelligent transport
-                    system content manager.
+                    <strong>{t("OnBoardPID.busData")}</strong>{" "}
+                    {t("OnBoardPID.busDataDescription")}
                   </li>
                   <li>
-                    <strong>Connections Info:</strong> Comes from both the AMB
-                    API and the company's own database for real-time transport
-                    connections.
+                    <strong>{t("OnBoardPID.connectionsInfo")}</strong>{" "}
+                    {t("OnBoardPID.connectionsInfoDescription")}
                   </li>
                   <li>
-                    <strong>Flight Info (for Airport Buses):</strong> Provided
-                    by the AENA API.
+                    <strong>{t("OnBoardPID.flightInfo")}</strong>{" "}
+                    {t("OnBoardPID.flightInfoDescription")}
                   </li>
                 </ul>
 
                 <li>
-                  <strong>Auto-Update Feature:</strong> Ensures the app stays
-                  updated to the latest version, including any system updates or
-                  new features.
+                  <strong>{t("OnBoardPID.autoUpdateFeature")}</strong>{" "}
+                  {t("OnBoardPID.autoUpdateDescription")}
                 </li>
 
                 <li>
-                  <strong>Data Handling:</strong> The app uses asynchronous
-                  updates to manage real-time information, ensuring smooth
-                  operation with temporary caching in case of network issues.
+                  <strong>{t("OnBoardPID.dataHandling")}</strong>{" "}
+                  {t("OnBoardPID.dataHandlingDescription")}
                 </li>
               </ul>
             </>
@@ -167,31 +160,27 @@ const OnboardPID: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="Key Features:"
+          title={t("OnBoardPID.keyFeaturesTitle")}
           titleColor="var(--section-2-title)"
-          icons={[{ src: keyboard, alt: "Icon 8" }]}
+          icons={[{ src: keyboard, alt: t("OnBoardPID.icon6") }]}
           paragraph={
             <>
               <ul>
                 <li>
-                  <strong>Stop and Destination Information:</strong> Displays
-                  upcoming bus stops, final destinations, and connections to
-                  other public transport systems.
+                  <strong>{t("OnBoardPID.stopInformation")}</strong>{" "}
+                  {t("OnBoardPID.stopInformationDescription")}
                 </li>
                 <li>
-                  <strong>Airport Integration:</strong> For buses heading to the
-                  airport, the app displays upcoming flight information using
-                  the AENA API.
+                  <strong>{t("OnBoardPID.airportIntegration")}</strong>{" "}
+                  {t("OnBoardPID.airportIntegrationDescription")}
                 </li>
                 <li>
-                  <strong>Media Content:</strong> Supports various types of
-                  media (videos, images) for informational or advertising
-                  purposes.
+                  <strong>{t("OnBoardPID.mediaContent")}</strong>{" "}
+                  {t("OnBoardPID.mediaContentDescription")}
                 </li>
                 <li>
-                  <strong>Audio Announcements:</strong> The app provides audio
-                  announcements for upcoming stops and other important updates,
-                  improving accessibility for all passengers.
+                  <strong>{t("OnBoardPID.audioAnnouncements")}</strong>{" "}
+                  {t("OnBoardPID.audioAnnouncementsDescription")}
                 </li>
               </ul>
             </>
@@ -200,27 +189,23 @@ const OnboardPID: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="Challenges and Solutions:"
+          title={t("OnBoardPID.challengesTitle")}
           titleColor="var(--section-2-title)"
-          icons={[{ src: handw, alt: "Icon 10" }]}
+          icons={[{ src: handw, alt: t("OnBoardPID.icon7") }]}
           paragraph={
             <>
               <ul>
                 <li>
-                  <strong>Real-Time Data Synchronization:</strong> Ensuring
-                  accurate synchronization of bus stop data, flight information,
-                  and media content required efficient API management and
-                  background updates.
+                  <strong>{t("OnBoardPID.realTimeData")}</strong>{" "}
+                  {t("OnBoardPID.realTimeDataDescription")}
                 </li>
                 <li>
-                  <strong>Hardware Compatibility:</strong> The app needed to run
-                  smoothly across different display systems inside buses,
-                  requiring flexible design and thorough testing.
+                  <strong>{t("OnBoardPID.hardwareCompatibility")}</strong>{" "}
+                  {t("OnBoardPID.hardwareCompatibilityDescription")}
                 </li>
                 <li>
-                  <strong>Accessibility:</strong> The integration of audio
-                  announcements ensured the app was accessible for visually
-                  impaired passengers.
+                  <strong>{t("OnBoardPID.accessibility")}</strong>{" "}
+                  {t("OnBoardPID.accessibilityDescription")}
                 </li>
               </ul>
             </>
@@ -229,17 +214,14 @@ const OnboardPID: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="Design Considerations:"
+          title={t("OnBoardPID.designConsiderationsTitle")}
           titleColor="var(--section-2-title)"
-          icons={[{ src: brillo, alt: "Icon 12" }]}
+          icons={[{ src: brillo, alt: t("OnBoardPID.icon8") }]}
           paragraph={
             <>
               <p>
-                <strong>UI Design:</strong> The UI is designed to be clear and
-                visible to all passengers, with timely updates on bus stops,
-                routes, and other travel information. The app is optimized to
-                manage multiple types of content, from transport updates to
-                media, without overwhelming system resources.
+                <strong>{t("OnBoardPID.uiDesign")}</strong>{" "}
+                {t("OnBoardPID.uiDesignDescription")}
               </p>
             </>
           }
@@ -249,10 +231,31 @@ const OnboardPID: React.FC = () => {
       {/* Cuarta Card con el componente Carousel */}
       <div className={styles.videoCardContainer}>
         <VideoCard
-          title="Onboard PID Video"
+          title={t("OnBoardPID.videoTitle")}
           videoSrc={onboardVideo}
-          text="This video showcases the real-time information system onboard an Aerobus, which connects central Barcelona with the airport. The flow begins with the bus departing from a stop, displaying connections. Next, all stops along the route are shown, with completed stops grayed out. The screen then splits to display the current time, followed by flight connections. Informative images and videos are presented while continuously displaying the upcoming stop, ensuring passengers stay informed throughout the journey."
+          text={t("OnBoardPID.videoDescription")}
         />
+      </div>
+      <div className={styles.navigationContainer}>
+        {/* Flecha de proyecto anterior */}
+        <div onClick={goToPreviousProject} className={styles.navigationItem}>
+          <img
+            src={arrowLeft}
+            alt="Previous Project Arrow"
+            className={styles.arrowIcon}
+          />
+          <span>{t("Previous Project")}</span>
+        </div>
+
+        {/* Flecha de siguiente proyecto */}
+        <div onClick={goToNextProject} className={styles.navigationItem}>
+          <span>{t("Next Project")}</span>
+          <img
+            src={arrowRight}
+            alt="Next Project Arrow"
+            className={styles.arrowIcon}
+          />
+        </div>
       </div>
     </div>
   );

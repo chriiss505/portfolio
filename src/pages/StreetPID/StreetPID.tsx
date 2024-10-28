@@ -4,10 +4,12 @@ import Tag from "../../components/Tags/Tag"; // Asumiendo que tienes un componen
 import DescriptionLayout from "../../components/DescriptionLayout/DescriptionLayout";
 import Icon from "../../components/Icons/Icon";
 import Carousel from "../../components/Carousel/Carousel"; // Asegúrate de la ruta correcta
+import { useTranslation } from "react-i18next"; // Importa el hook useTranslation
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
 
 /*--------------picture------------*/
 
-import mainPicture from "../../assets/images/street_pid_1.png";
+import mainPicture from "../../assets/images/street_pid_11.png";
 
 /*--------------icons------------*/
 
@@ -27,13 +29,21 @@ import arrowLeft from "../../assets/images/left.svg";
 import handw from "../../assets/images/handw.svg";
 
 const StreetPID: React.FC = () => {
+  const { t } = useTranslation(); // Inicializa la función de traducción
+  const navigate = useNavigate(); // Inicializa useNavigate
+
+  const handleNextProject = () => {
+    navigate("/onboard-pid"); // Cambia la ruta según el path de OnBoardPID
+  };
+
   return (
     <div className={styles.pageContainer}>
       {/* Primera Card */}
       <div
         className={`${styles.titleCard} ${styles.backgroundColor} ${styles.card}`}
       >
-        <h1 className={styles.centerText}>Street PID's APK</h1>
+        <h1 className={styles.centerText}>{t("streetPID.title")}</h1>{" "}
+        {/* Traducción del título */}
         <div className={styles.tagsContainer}>
           <Tag name="UI" />
           <Tag name="UX" />
@@ -46,45 +56,38 @@ const StreetPID: React.FC = () => {
       <div className={`${styles.card} ${styles.backgroundColor}`}>
         <div className={styles.twoColumnLayout}>
           <div className={styles.leftColumnProject}>
-            <h2>Project overview:</h2>
+            <h2>{t("streetPID.projectOverview")}</h2>{" "}
+            {/* Traducción de "Project Overview" */}
             <p>
-              <strong>Goals:</strong> The aim of this project was to fulfill the
-              requirements set by public tenders, which mandated the
-              implementation of real-time bus arrival displays on public
-              information screens. These displays are installed at bus stops or
-              transit hubs, providing passengers with next bus arrivals and
-              other relevant information without any user interaction.
-              Additionally, the app was tailored for private transport
-              companies, such as those offering shuttle services from
-              Barcelona’s cruise terminal to the city center, ensuring
-              passengers stay informed in real time.
-            </p>
-
-            <p>
-              <strong>Clients:</strong> Transports Urbans de Sabadell, Govern
-              d’Andorra, Aena Barcelona, Aena Madrid.
-            </p>
-
-            <p>
-              <strong>My role:</strong> Designing and coding the frontend.
+              <strong>{t("streetPID.goals")}</strong>{" "}
+              {t("streetPID.goalsDescription")}
             </p>
             <p>
-              <strong>Featured in: </strong>
+              <strong>{t("streetPID.clients")}</strong>{" "}
+              {t("streetPID.clientList")}
+            </p>
+            <p>
+              <strong>{t("streetPID.myRole")}</strong>{" "}
+              {t("streetPID.roleDescription")}
+            </p>
+            <p>
+              <strong>{t("streetPID.featuredIn")}</strong>
               <a
                 href="https://www.diaridesabadell.com/2023/03/30/autobusos-tus-sabadell/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                El Diari de Sabadell
+                {t("streetPID.diariLink")}
               </a>
             </p>
-
             <p>
-              <strong>Video: </strong>
+              <strong>{t("streetPID.video")}</strong>
               <a
                 href="https://www.instagram.com/reel/C3GR5nEMAaX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                Sabadell Major using the system
+                {t("streetPID.videoLink")}
               </a>
             </p>
           </div>
@@ -92,7 +95,7 @@ const StreetPID: React.FC = () => {
             <img
               src={mainPicture}
               className={styles.border10}
-              alt="Project Image"
+              alt={t("streetPID.projectImageAlt")} // Traducción del alt
             />
           </div>
         </div>
@@ -101,7 +104,7 @@ const StreetPID: React.FC = () => {
       {/* Tercera Card */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
-          title="Technologies and Tools Used:"
+          title={t("streetPID.technologiesTitle")} // Traducción del título
           titleColor="var(--section-1-title)"
           icons={[
             { src: illustrator, alt: "Icon 1" },
@@ -113,26 +116,22 @@ const StreetPID: React.FC = () => {
           paragraph={
             <ul>
               <li>
-                <strong>Development Environment:</strong> Android Studio.
+                <strong>{t("streetPID.devEnvironment")}</strong>{" "}
+                {t("streetPID.androidStudio")}
               </li>
               <li>
-                <strong>Programming Languages:</strong> Java.
+                <strong>{t("streetPID.programmingLanguages")}</strong>{" "}
+                {t("streetPID.java")}
               </li>
               <li>
-                <strong>Design Tools:</strong> Figma, Photoshop, Illustrator for
-                prototyping and UI design.
+                <strong>{t("streetPID.designTools")}</strong>{" "}
+                {t("streetPID.figmaPhotoshop")}
               </li>
               <li>
-                <strong>APIs:</strong>
+                <strong>{t("streetPID.apis")}</strong>
                 <ul>
-                  <li>
-                    Intelligent Transport System (ITS) web manager for real-time
-                    bus data (JSON or XML format).
-                  </li>
-                  <li>
-                    Optional integrations with open-source weather APIs and the
-                    AENA API to display flight information for specific clients.
-                  </li>
+                  <li>{t("streetPID.itsApi")}</li>
+                  <li>{t("streetPID.weatherApi")}</li>
                 </ul>
               </li>
             </ul>
@@ -140,55 +139,39 @@ const StreetPID: React.FC = () => {
         />
         <hr className={styles.separator} />
         <DescriptionLayout
-          title="Architecture and Data Management:"
+          title={t("streetPID.architectureTitle")} // Traducción del título
           titleColor="var(--section-1-title)"
           icons={[{ src: computer, alt: "Icon 6" }]}
           paragraph={
             <>
-              <p>
-                The app handles real-time data by integrating with multiple
-                APIs, which supply bus arrival times, weather conditions, or
-                flight information, depending on the client’s configuration. The
-                key data points include:
-              </p>
+              <p>{t("streetPID.architectureDescription")}</p>
               <ul>
-                <li>
-                  Bus arrival times (including UI elements such as colors and
-                  media content).
-                </li>
-                <li>
-                  Optional weather or flight information based on specific
-                  client requests.
-                </li>
+                <li>{t("streetPID.dataPointsBusArrival")}</li>
+                <li>{t("streetPID.dataPointsOptional")}</li>
               </ul>
-              <p>
-                The system is designed to function continuously, updating the
-                public information screen at pre-set intervals.
-              </p>
+              <p>{t("streetPID.continuousFunction")}</p>
             </>
           }
         />
         <hr className={styles.separator} />
         <DescriptionLayout
-          title="Key Features:"
+          title={t("streetPID.keyFeaturesTitle")} // Traducción del título
           titleColor="var(--section-1-title)"
           icons={[{ src: keyboard, alt: "Icon 8" }]}
           paragraph={
             <>
               <ul>
                 <li>
-                  <strong>Real-Time Data:</strong> Automatically fetches bus
-                  arrival times, colors, and media for display. The content
-                  refreshes based on timers, without user interaction.
+                  <strong>{t("streetPID.realTimeData")}</strong>{" "}
+                  {t("streetPID.realTimeDescription")}
                 </li>
                 <li>
-                  <strong>Custom Integrations:</strong> Depending on the client,
-                  the app can also show weather and flight data.
+                  <strong>{t("streetPID.customIntegrations")}</strong>{" "}
+                  {t("streetPID.customDescription")}
                 </li>
                 <li>
-                  <strong>Accessibility:</strong> Text-to-speech (TTS)
-                  integration for visually impaired passengers, triggered by the
-                  “Ciberpass” system, which also controls traffic lights.
+                  <strong>{t("streetPID.accessibility")}</strong>{" "}
+                  {t("streetPID.accessibilityDescription")}
                 </li>
               </ul>
             </>
@@ -196,27 +179,23 @@ const StreetPID: React.FC = () => {
         />
         <hr className={styles.separator} />
         <DescriptionLayout
-          title="Challenges and Solutions:"
+          title={t("streetPID.challengesTitle")} // Traducción del título
           titleColor="var(--section-1-title)"
           icons={[{ src: sakura, alt: "Icon 10" }]}
           paragraph={
             <>
               <ul>
                 <li>
-                  <strong>Hardware Variability:</strong> The app had to run on
-                  different screens with varying sizes, aspect ratios, and
-                  Android versions. Flexible layouts and thorough testing
-                  ensured compatibility.
+                  <strong>{t("streetPID.hardwareVariability")}</strong>{" "}
+                  {t("streetPID.hardwareDescription")}
                 </li>
                 <li>
-                  <strong>Non-Interactive Display:</strong> Since users can’t
-                  interact with the screen, I used timers to automate updates
-                  and manage background processes efficiently.
+                  <strong>{t("streetPID.nonInteractiveDisplay")}</strong>{" "}
+                  {t("streetPID.nonInteractiveDescription")}
                 </li>
                 <li>
-                  <strong>Accessibility:</strong> The TTS integration with GPIO
-                  and “Ciberpass” provides audio announcements for visually
-                  impaired passengers.
+                  <strong>{t("streetPID.accessibilityChallenges")}</strong>{" "}
+                  {t("streetPID.accessibilitySolution")}
                 </li>
               </ul>
             </>
@@ -224,26 +203,23 @@ const StreetPID: React.FC = () => {
         />
         <hr className={styles.separator} />
         <DescriptionLayout
-          title="Design Considerations:"
+          title={t("streetPID.designConsiderationsTitle")} // Traducción del título
           titleColor="var(--section-1-title)"
           icons={[{ src: handw, alt: "Icon 12" }]}
           paragraph={
             <>
               <ul>
                 <li>
-                  <strong>Design Tools:</strong> The design was created using
-                  Figma, Photoshop, and Illustrator, with a focus on clarity and
-                  ease of use for public viewing.
+                  <strong>{t("streetPID.designTools")}</strong>{" "}
+                  {t("streetPID.designDescription")}
                 </li>
                 <li>
-                  <strong>User Interaction:</strong> Since users cannot interact
-                  with the display, the timers were carefully chosen.
+                  <strong>{t("streetPID.userInteraction")}</strong>{" "}
+                  {t("streetPID.interactionDescription")}
                 </li>
                 <li>
-                  <strong>Layout Optimization:</strong> The layout was optimized
-                  for large displays, ensuring legibility from a distance, while
-                  also integrating accessibility features like TTS for visually
-                  impaired passengers.
+                  <strong>{t("streetPID.layoutOptimization")}</strong>{" "}
+                  {t("streetPID.layoutDescription")}
                 </li>
               </ul>
             </>
@@ -255,6 +231,15 @@ const StreetPID: React.FC = () => {
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <Carousel titleColor="var(--section-1-title)" />{" "}
         {/* Aquí usas tu componente Carousel */}
+      </div>
+      {/* Flecha de "Next Project" */}
+      <div className={styles.nextProjectContainer} onClick={handleNextProject}>
+        <span>Next Project</span>
+        <img
+          src={arrowRight}
+          alt="Next Project Arrow"
+          className={styles.arrowIcon}
+        />
       </div>
     </div>
   );

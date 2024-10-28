@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: #007bff;
-  padding: 20px;
+  padding: 30px 30px;
   border-radius: 10px;
   max-width: 1200px;
   width: 100%; /* Se ajusta al tamaño de la pantalla */
@@ -13,7 +13,7 @@
 /* La columna izquierda de la imagen */
 .cardLeft {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 
@@ -34,7 +34,6 @@
 /* Título */
 .cardTitle {
   margin: 0;
-  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -49,8 +48,8 @@
 /* Descripción */
 .cardDescription {
   margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.5;
+  max-width: 600px;
+  font-weight: lighter;
 }
 
 /* Botón alineado a la derecha */
@@ -65,6 +64,10 @@
   .card {
     grid-template-columns: 1fr; /* Cambiamos a una sola columna en pantallas pequeñas */
     text-align: center;
+  }
+
+  .cardLeft {
+    justify-content: center;
   }
 
   .cardRight {

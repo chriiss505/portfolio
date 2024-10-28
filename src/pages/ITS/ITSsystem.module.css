@@ -9,6 +9,39 @@
   overflow-x: clip;
   max-width: 100%;
 }
+.navigationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  color: var(--text-color);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.navigationItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.navigationItem:hover .arrowIcon {
+  transform: translateX(5px); /* Efecto de movimiento en hover */
+}
+
+.navigationItem:first-child:hover .arrowIcon {
+  transform: translateX(
+    -5px
+  ); /* Flecha izquierda se mueve hacia la izquierda */
+}
 
 .card {
   width: 100%;

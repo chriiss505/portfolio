@@ -17,7 +17,11 @@
   right: 0;
   z-index: 1000;
 }
-
+.languageLink {
+  cursor: pointer;
+  text-decoration: underline; /* Para subrayar el texto */
+  color: inherit; /* Para heredar el color del texto */
+}
 .logo {
   font-family: "Erica One";
   font-size: 3rem;
@@ -30,6 +34,7 @@
   display: flex;
   gap: 20px;
   cursor: pointer;
+  align-items: center;
 }
 
 .hamburger {

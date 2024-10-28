@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Footer.module.css"; // Ajusta la ruta según sea necesario
 import { useNavigate } from "react-router-dom"; // Para manejar la navegación
-import { Link as ScrollLink } from "react-scroll"; // Importa el componente Link de react-scroll
+import { useTranslation } from "react-i18next"; // Importa el hook
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation(); // Obtén la función t
   const navigate = useNavigate(); // Hook para manejar la navegación
 
   const handleScrollToSection = (section: string) => {
@@ -20,14 +21,18 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <nav className={styles.footerNav}>
-          <a onClick={() => handleScrollToSection("the-work")}>The Work</a>
-          <a onClick={() => handleScrollToSection("about")}>About</a>
-          <a onClick={() => handleScrollToSection("contact")}>Contact</a>
-          <a href="/privacy-policy">Privacy Policy</a>
+          <a onClick={() => handleScrollToSection("the-work")}>
+            {t("footer.theWork")}
+          </a>
+          <a onClick={() => handleScrollToSection("about")}>
+            {t("footer.about")}
+          </a>
+          <a onClick={() => handleScrollToSection("contact")}>
+            {t("footer.contact")}
+          </a>
+          <a href="/privacy-policy">{t("footer.privacyPolicy")}</a>
         </nav>
-        <p className={styles.footerText}>
-          Created with React + TypeScript by Cristina Sanchez © 2024
-        </p>
+        <p className={styles.footerText}>{t("footer.credits")}</p>
       </div>
     </footer>
   );

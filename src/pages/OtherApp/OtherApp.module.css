@@ -9,11 +9,32 @@
   overflow-x: clip;
   max-width: 100%;
 }
+.nextProjectContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  max-width: 1200px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: var(--text-color);
+  font-weight: bold;
+  justify-content: left;
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.nextProjectContainer:hover .arrowIcon {
+  transform: translateX(5px); /* Añade un efecto de movimiento */
+}
 
 .singleColumnLayout {
   display: flex; /* Usamos flexbox */
   flex-direction: column; /* Disposición en columna */
-  padding: 20px; /* Espaciado interno */
 }
 
 .card {

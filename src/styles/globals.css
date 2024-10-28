@@ -52,6 +52,8 @@
 h1 {
   font-weight: bold;
   font-size: 49px; /* Tamaño de fuente para h1 */
+  letter-spacing: -1px;
+  line-height: 73px;
 }
 
 h2 {
@@ -81,12 +83,13 @@ body {
   background-color: var(--background-color);
 }
 p {
-  text-align: justify;
+  text-align: left;
 }
 
 /* Estilos Responsivos */
 @media (max-width: 768px) {
   h1 {
+    line-height: 42px;
     font-size: 36px; /* Tamaño reducido para pantallas medianas */
   }
 

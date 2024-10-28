@@ -1,5 +1,6 @@
 .menuLink {
   font-family: "Poppins";
+
   text-decoration: none; /* Sin subrayado en el texto */
   color: var(--text-color); /* Texto en blanco */
   background-color: var(--white);
@@ -11,6 +12,10 @@
   box-shadow: 5px 5px 0px var(--black); /* Sombra con posición X 4, Y 4, sin blur, color #c0c0c0 */
   stroke-width: 3px;
   border: 2px solid var(--text-color);
+}
+.menuLink.hamburgerMenuLink {
+  width: 80%; /* Ancho del 80% para el menú hamburguesa */
+  margin: 0 auto; /* Centra el botón dentro del contenedor */
 }
 
 .menuLink:hover {

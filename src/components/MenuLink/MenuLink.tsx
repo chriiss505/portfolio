@@ -6,12 +6,22 @@ interface MenuLinkProps {
   text: string;
   link?: string; // Propiedad opcional
   onClick?: () => void; // Callback opcional para manejar click
+  isHamburger?: boolean; // Propiedad opcional para indicar si es un menú hamburguesa
 }
 
-const MenuLink: React.FC<MenuLinkProps> = ({ text, link, onClick }) => {
+const MenuLink: React.FC<MenuLinkProps> = ({
+  text,
+  link,
+  onClick,
+  isHamburger,
+}) => {
+  const linkClass = isHamburger
+    ? `${styles.menuLink} ${styles.hamburgerMenuLink}`
+    : styles.menuLink; // Aplica clase dependiendo del estado
+
   return link ? (
     <Link
-      className={styles.menuLink} // Aplica el estilo directamente
+      className={linkClass} // Aplica el estilo directamente
       to={link}
       smooth={true}
       duration={500}
@@ -20,9 +30,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ text, link, onClick }) => {
       {text}
     </Link>
   ) : (
-    <button className={styles.menuLink} onClick={onClick}>
-      {" "}
-      {/* Aplica el estilo al botón también */}
+    <button className={linkClass} onClick={onClick}>
       {text}
     </button>
   );

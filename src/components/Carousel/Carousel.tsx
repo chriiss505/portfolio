@@ -4,13 +4,15 @@ import Modal from "../Modal/Modal"; // Componente Modal
 import image1 from "../../assets/images/street_pid_1.png"; // Imágenes del carrusel
 import image2 from "../../assets/images/street_pid_2.png";
 import image3 from "../../assets/images/street_pid_3.png";
+import image4 from "../../assets/images/street_pid_4.png";
+import image5 from "../../assets/images/street_pid_5.png";
 
 interface CarouselProps {
   titleColor?: string; // Propiedad opcional para el color del título
 }
 
 const Carousel: React.FC<CarouselProps> = ({ titleColor }) => {
-  const images = [image1, image2, image3]; // Arreglo de imágenes
+  const images = [image1, image4, image5]; // Arreglo de imágenes
   const [modalImage, setModalImage] = useState<string | null>(null); // Imagen para el modal
   const scrollContainerRef = useRef<HTMLDivElement>(null); // Referencia del contenedor de scroll
 

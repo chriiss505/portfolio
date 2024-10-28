@@ -1,23 +1,23 @@
 import React from "react";
+import { useTranslation } from "react-i18next"; // Importar useTranslation
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
+
 import styles from "./ITSsystem.module.css";
-import Tag from "../../components/Tags/Tag"; // Asumiendo que tienes un componente Tag para las etiquetas
+import Tag from "../../components/Tags/Tag";
 import DescriptionLayout from "../../components/DescriptionLayout/DescriptionLayout";
 import Icon from "../../components/Icons/Icon";
-import Carousel from "../../components/Carousel/Carousel"; // Asegúrate de la ruta correcta
+import Carousel from "../../components/Carousel/Carousel";
 import VideoCard from "../../components/VideoCard/VideoCard";
 import FleetManagementCard from "../../components/FleetManagementCard/FleetManagementCard";
 
-/*--------------picture------------*/
-
+// Imágenes
 import mainPicture from "../../assets/images/its.png";
-
 import image1 from "../../assets/images/its_1.png";
 import image2 from "../../assets/images/its_2.png";
 import image3 from "../../assets/images/its_3.png";
 import image4 from "../../assets/images/its_4.png";
 
-/*--------------icons------------*/
-
+// Iconos
 import illustrator from "../../assets/images/ai_logo.png";
 import photoshop from "../../assets/images/ps_logo.png";
 import androidStudio from "../../assets/images/android_logo.png";
@@ -29,7 +29,7 @@ import define from "../../assets/images/logo_define.png";
 import heart from "../../assets/images/logo_heart.png";
 import pencil from "../../assets/images/logo_pencil.png";
 
-/*--------------svg------------*/
+// SVGs
 import computer from "../../assets/images/computer_v2.svg";
 import keyboard from "../../assets/images/keyboard.svg";
 import sakura from "../../assets/images/sakura.svg";
@@ -42,13 +42,20 @@ import brillo from "../../assets/images/brillo.svg";
 const images = [image1, image2, image3, image4];
 
 const ITSsystem: React.FC = () => {
+  const { t } = useTranslation(); // Inicializar la función de traducción
+  const navigate = useNavigate(); // Inicializa useNavigate
+
+  const goToPreviousProject = () => navigate("/onboard-pid");
+  const goToNextProject = () => navigate("/other-app");
+
   return (
     <div className={styles.pageContainer}>
       {/* Primera Card */}
       <div
         className={`${styles.titleCard} ${styles.backgroundColor} ${styles.card}`}
       >
-        <h1 className={styles.centerText}>ITS Web Managers</h1>
+        <h1 className={styles.centerText}>{t("itsSystem.title")}</h1>{" "}
+        {/* Traducción del título */}
         <div className={styles.tagsContainer}>
           <Tag name="UX" />
           <Tag name="GraphicDesign" />
@@ -59,39 +66,26 @@ const ITSsystem: React.FC = () => {
       <div className={`${styles.card} ${styles.backgroundColor}`}>
         <div className={styles.twoColumnLayout}>
           <div className={styles.leftColumnProject}>
-            <h2>Project overview:</h2>
+            <h2>{t("itsSystem.projectOverview")}</h2>{" "}
+            {/* Traducción de la descripción */}
             <p>
-              <strong>Goals:</strong>
+              <strong>{t("itsSystem.goals")}</strong>
             </p>
+            <p>{t("itsSystem.goalDescription")}</p>
             <p>
-              This Intelligent Transportation System (ITS) goal is to be a
-              comprehensive solution to manage transit operations in real-time.
-              My role focused on UI/UX design, specifically prototyping and
-              designing the interface to ensure it was intuitive for transit
-              operators, drivers, and passengers.
+              <strong>{t("itsSystem.clients")}</strong>
             </p>
-
+            <p>{t("itsSystem.clientNames")}</p>
             <p>
-              <strong>Clients:</strong>
+              <strong>{t("itsSystem.myRole")}</strong>
             </p>
-            <p>
-              Transports Urbans de Sabadell, Govern d’Andorra, Monbus, Soler i
-              Sauret, Aerobus, Sarbus
-            </p>
-
-            <p>
-              <strong>My role:</strong>
-            </p>
-            <p>
-              Designing components and user flows, applying both UX and UI
-              principles.
-            </p>
+            <p>{t("itsSystem.roleDescription")}</p>
           </div>
           <div className={styles.rightColumnProject}>
             <img
               src={mainPicture}
               className={styles.border10}
-              alt="Project Image"
+              alt={t("itsSystem.projectImageAlt")} // Traducción del alt
             />
           </div>
         </div>
@@ -100,7 +94,7 @@ const ITSsystem: React.FC = () => {
       {/* Tercera Card */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
-          title="Design Thinking Approach:"
+          title={t("itsSystem.designThinkingTitle")} // Traducción del título
           titleColor="var(--section-3-title)"
           icons={[
             { src: pencil, alt: "Icon 1" },
@@ -112,31 +106,29 @@ const ITSsystem: React.FC = () => {
           paragraph={
             <div>
               <p>
-                I applied a design thinking methodology to guide the design
-                process:
+                {t("itsSystem.designThinkingDescription")}{" "}
+                {/* Traducción de la descripción */}
               </p>
               <ul>
                 <li>
-                  <strong>Empathize:</strong> Conducted in-depth user research
-                  through surveys, interviews, and field observations to
-                  understand the challenges faced by operators, drivers, and
-                  passengers.
+                  <strong>{t("itsSystem.empathize")}</strong>{" "}
+                  {t("itsSystem.empathizeDescription")}
                 </li>
                 <li>
-                  <strong>Define:</strong> Identified key user pain points and
-                  set actionable design goals.
+                  <strong>{t("itsSystem.define")}</strong>{" "}
+                  {t("itsSystem.defineDescription")}
                 </li>
                 <li>
-                  <strong>Ideate:</strong> Brainstormed potential solutions and
-                  features to address the needs identified.
+                  <strong>{t("itsSystem.ideate")}</strong>{" "}
+                  {t("itsSystem.ideateDescription")}
                 </li>
                 <li>
-                  <strong>Prototype:</strong> Created interactive designs and
-                  prototypes for stakeholder review.
+                  <strong>{t("itsSystem.prototype")}</strong>{" "}
+                  {t("itsSystem.prototypeDescription")}
                 </li>
                 <li>
-                  <strong>Test:</strong> Conducted usability testing and
-                  iterated on the design based on feedback.
+                  <strong>{t("itsSystem.test")}</strong>{" "}
+                  {t("itsSystem.testDescription")}
                 </li>
               </ul>
             </div>
@@ -145,47 +137,43 @@ const ITSsystem: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="Prototyping with Figma:"
+          title={t("itsSystem.prototypingTitle")} // Traducción del título
           titleColor="var(--section-3-title)"
           icons={[{ src: figma, alt: "Icon 6" }]}
           paragraph={
             <>
               <p>
-                The app is designed to manage multiple data streams efficiently
-                with automatic updates.
+                {t("itsSystem.prototypingDescription")}{" "}
+                {/* Traducción de la descripción */}
               </p>
 
               <ul>
                 <li>
-                  <strong>Data Sources:</strong>
+                  <strong>{t("itsSystem.dataSources")}</strong>
                 </li>
                 <ul>
                   <li>
-                    <strong>Bus Data & Media:</strong> Fetched from the
-                    company’s database, populated by its intelligent transport
-                    system content manager.
+                    <strong>{t("itsSystem.busData")}</strong>{" "}
+                    {t("itsSystem.busDataDescription")}
                   </li>
                   <li>
-                    <strong>Connections Info:</strong> Comes from both the AMB
-                    API and the company's own database for real-time transport
-                    connections.
+                    <strong>{t("itsSystem.connectionsInfo")}</strong>{" "}
+                    {t("itsSystem.connectionsInfoDescription")}
                   </li>
                   <li>
-                    <strong>Flight Info (for Airport Buses):</strong> Provided
-                    by the AENA API.
+                    <strong>{t("itsSystem.flightInfo")}</strong>{" "}
+                    {t("itsSystem.flightInfoDescription")}
                   </li>
                 </ul>
 
                 <li>
-                  <strong>Auto-Update Feature:</strong> Ensures the app stays
-                  updated to the latest version, including any system updates or
-                  new features.
+                  <strong>{t("itsSystem.autoUpdate")}</strong>{" "}
+                  {t("itsSystem.autoUpdateDescription")}
                 </li>
 
                 <li>
-                  <strong>Data Handling:</strong> The app uses asynchronous
-                  updates to manage real-time information, ensuring smooth
-                  operation with temporary caching in case of network issues.
+                  <strong>{t("itsSystem.dataHandling")}</strong>{" "}
+                  {t("itsSystem.dataHandlingDescription")}
                 </li>
               </ul>
             </>
@@ -194,31 +182,29 @@ const ITSsystem: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="Design System:"
+          title={t("itsSystem.designSystemTitle")} // Traducción del título
           titleColor="var(--section-3-title)"
           icons={[{ src: keyboard, alt: "Icon 8" }]}
           paragraph={
             <>
               <div>
                 <p>
-                  I developed a comprehensive design system to standardize the
-                  UI and streamline development. This included:
+                  {t("itsSystem.designSystemDescription")}{" "}
+                  {/* Traducción de la descripción */}
                 </p>
 
                 <ul>
                   <li>
-                    <strong>Visual guidelines:</strong> Colors, typography, and
-                    iconography for a consistent and accessible interface.
+                    <strong>{t("itsSystem.visualGuidelines")}</strong>{" "}
+                    {t("itsSystem.visualGuidelinesDescription")}
                   </li>
                   <li>
-                    <strong>UI components:</strong> Reusable elements like
-                    buttons, forms, and menus, which simplified development and
-                    maintained visual harmony.
+                    <strong>{t("itsSystem.uiComponents")}</strong>{" "}
+                    {t("itsSystem.uiComponentsDescription")}
                   </li>
                   <li>
-                    <strong>Interaction patterns:</strong> Standardized
-                    animations and transitions to ensure smooth user experience
-                    across devices.
+                    <strong>{t("itsSystem.interactionPatterns")}</strong>{" "}
+                    {t("itsSystem.interactionPatternsDescription")}
                   </li>
                 </ul>
               </div>
@@ -228,29 +214,21 @@ const ITSsystem: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="UX Research and Testing:"
+          title={t("itsSystem.uxResearchTitle")} // Traducción del título
           titleColor="var(--section-3-title)"
           icons={[{ src: sakura, alt: "Icon 10" }]}
           paragraph={
             <>
               <div>
                 <p>
-                  The UX research focused on understanding the workflows and
-                  pain points of different users:
+                  {t("itsSystem.uxResearchDescription")}{" "}
+                  {/* Traducción de la descripción */}
                 </p>
 
                 <ul>
-                  <li>
-                    Created personas and journey maps to visualize the needs of
-                    operators, drivers, and passengers.
-                  </li>
-                  <li>
-                    Conducted usability tests on prototypes with real users to
-                    gather feedback.
-                  </li>
-                  <li>
-                    Incorporated user feedback in iterative design improvements.
-                  </li>
+                  <li>{t("itsSystem.personasAndMaps")}</li>
+                  <li>{t("itsSystem.usabilityTests")}</li>
+                  <li>{t("itsSystem.userFeedback")}</li>
                 </ul>
               </div>
             </>
@@ -259,33 +237,21 @@ const ITSsystem: React.FC = () => {
         <hr className={styles.separator} />
 
         <DescriptionLayout
-          title="Key Features of the Web Manager:"
+          title={t("itsSystem.keyFeaturesTitle")} // Traducción del título
           titleColor="var(--section-3-title)"
           icons={[{ src: brillo, alt: "Icon 12" }]}
           paragraph={
             <>
               <div>
                 <p>
-                  The web manager UI was designed with a focus on operational
-                  efficiency, and it includes:
+                  {t("itsSystem.keyFeaturesDescription")}{" "}
+                  {/* Traducción de la descripción */}
                 </p>
 
                 <ul>
-                  <li>
-                    Real-Time Vehicle Monitoring: Allows operators to track
-                    buses and other vehicles in real time, improving fleet
-                    management and responsiveness.
-                  </li>
-                  <li>
-                    Driver Communications: Provides a streamlined interface for
-                    real-time communication with drivers, ensuring quick and
-                    clear updates.
-                  </li>
-                  <li>
-                    Passenger Information Capabilities: Displays real-time
-                    passenger updates like bus schedules and route information,
-                    helping operators provide better service.
-                  </li>
+                  <li>{t("itsSystem.realTimeMonitoring")}</li>
+                  <li>{t("itsSystem.driverCommunications")}</li>
+                  <li>{t("itsSystem.passengerInformation")}</li>
                 </ul>
               </div>
             </>
@@ -295,10 +261,33 @@ const ITSsystem: React.FC = () => {
 
       {/* Cuarta Card con el componente Carousel */}
       <FleetManagementCard
-        title="Wireframes:*"
+        titleKey="fleetManagementCard.title"
         iconSrc={computer}
         images={images}
       />
+      {/* Flechas de navegación en la parte inferior */}
+      {/* Flecha de proyecto anterior */}
+      <div className={styles.navigationContainer}>
+        {/* Flecha de proyecto anterior */}
+        <div onClick={goToPreviousProject} className={styles.navigationItem}>
+          <img
+            src={arrowLeft}
+            alt="Previous Project Arrow"
+            className={styles.arrowIcon}
+          />
+          <span>{t("Previous Project")}</span>
+        </div>
+
+        {/* Flecha de siguiente proyecto */}
+        <div onClick={goToNextProject} className={styles.navigationItem}>
+          <span>{t("Next Project")}</span>
+          <img
+            src={arrowRight}
+            alt="Next Project Arrow"
+            className={styles.arrowIcon}
+          />
+        </div>
+      </div>
     </div>
   );
 };

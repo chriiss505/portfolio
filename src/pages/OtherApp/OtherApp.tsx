@@ -1,4 +1,7 @@
 import React from "react";
+import { useTranslation } from "react-i18next"; // Importar el hook de traducción
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
+
 import styles from "./OtherApp.module.css";
 import Tag from "../../components/Tags/Tag"; // Asumiendo que tienes un componente Tag para las etiquetas
 import DescriptionLayout from "../../components/DescriptionLayout/DescriptionLayout";
@@ -40,65 +43,60 @@ import handw from "../../assets/images/handw.svg";
 import brillo from "../../assets/images/brillo.svg";
 
 const OtherApp: React.FC = () => {
+  const { t } = useTranslation(); // Hook para traducción
+  const navigate = useNavigate(); // Inicializa useNavigate
+
+  const handlePreviousProject = () => {
+    navigate("/its-system"); // Cambia la ruta según el path de OnBoardPID
+  };
+
   return (
     <div className={styles.pageContainer}>
       {/* Primera Card */}
       <div
         className={`${styles.titleCard} ${styles.backgroundColor} ${styles.card}`}
       >
-        <h1 className={styles.centerText}>Other Apps</h1>
+        <h1 className={styles.centerText}>{t("otherApps.title")}</h1>
         <div className={styles.tagsContainer}>
-          <Tag name="UI" />
-          <Tag name="UX" />
-          <Tag name="GraphicDesign" />
-          <Tag name="Coding" />
+          <Tag name={t("otherApps.tags.ui")} />
+          <Tag name={t("otherApps.tags.ux")} />
+          <Tag name={t("otherApps.tags.graphicDesign")} />
+          <Tag name={t("otherApps.tags.coding")} />
         </div>
       </div>
 
       <div className={`${styles.card} ${styles.backgroundColor}`}>
         <div className={styles.singleColumnLayout}>
-          {" "}
-          {/* Cambia el layout a una sola columna */}
-          <h2>Projects:</h2>
-          <p>
-            Here, you'll find a collection of smaller projects, primarily
-            focused on passenger transportation and mobility solutions. Each
-            project is designed to improve the efficiency, convenience, and
-            experience for both passengers and operators. These solutions are
-            also developed to meet the specific requirements of public tenders,
-            ensuring compliance with industry standards and regulations
-          </p>
+          <h2>{t("otherApps.projects")}</h2>
+          <p>{t("otherApps.projectDescription")}</p>
         </div>
       </div>
 
-      {/* primera Card */}
+      {/* Primera Card */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <div className={styles.twoColumnLayout}>
           <div className={styles.leftColumnProject}>
-            <h2>Campapp:</h2>
+            <h2>{t("otherApps.campapp.title")}</h2>
             <p>
-              <strong>Goals: </strong>
-              The app enables drivers to view their assigned vehicle, its
-              location, and their scheduled shifts for the day. It was required
-              to be bilingual, supporting both English and Māori, and optimized
-              for the T2 mini device.
+              <strong>{t("otherApps.campapp.goals")}: </strong>
+              {t("otherApps.campapp.goalDescription")}
             </p>
 
             <p>
-              <strong>Clients: </strong>
-              Greater Wellington.
+              <strong>{t("otherApps.campapp.clients")}: </strong>
+              {t("otherApps.campapp.clientNames")}.
             </p>
 
             <p>
-              <strong>My role: </strong>I designed the app with UX principles in
-              mind and developed the frontend using Android Studio.
+              <strong>{t("otherApps.campapp.myRole")}: </strong>
+              {t("otherApps.campapp.roleDescription")}
             </p>
           </div>
           <div className={styles.rightColumnProject}>
             <img
               src={campapp}
               className={styles.border10}
-              alt="Project Image"
+              alt={t("otherApps.campapp.imageAlt")}
             />
           </div>
         </div>
@@ -108,74 +106,83 @@ const OtherApp: React.FC = () => {
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <div className={styles.twoColumnLayout}>
           <div className={styles.leftColumnProject}>
-            <h2>Ticketing app: </h2>
+            <h2>{t("otherApps.ticketingApp.title")}: </h2>
             <p>
-              <strong>Goals: </strong>
-              The app allows bus drivers to validate tickets, check ticket
-              validity, and sell tickets using either cash or credit card. It
-              was developed to run on two devices: Sunmi T2 Mini and Sunmi P2
-              Pro.
+              <strong>{t("otherApps.ticketingApp.goals")}: </strong>
+              {t("otherApps.ticketingApp.goalDescription")}
             </p>
 
             <p>
-              <strong>Clients: </strong>
-              Aerobus, Andorra Government, Fisersa, Monbus.
+              <strong>{t("otherApps.ticketingApp.clients")}: </strong>
+              {t("otherApps.ticketingApp.clientNames")}.
             </p>
 
             <p>
-              <strong>My role: </strong>
-              Designing components and user flows, applying both UX and UI
-              principles.
+              <strong>{t("otherApps.ticketingApp.myRole")}: </strong>
+              {t("otherApps.ticketingApp.roleDescription")}
             </p>
 
             <p>
-              <strong>Featured in: </strong>
+              <strong>{t("otherApps.ticketingApp.featuredIn")}: </strong>
               <a
                 href="https://www.blog.sunmi.tech/partners/mybus-smart-mobility-for-smart-cities/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Sunmi Blog
+                {t("otherApps.ticketingApp.linkText")}
               </a>
             </p>
           </div>
           <div className={styles.rightColumnProject}>
-            <img src={sunmi} className={styles.border10} alt="Project Image" />
+            <img
+              src={sunmi}
+              className={styles.border10}
+              alt={t("otherApps.ticketingApp.imageAlt")}
+            />
           </div>
         </div>
       </div>
-      {/* tercera Card */}
+
+      {/* Tercera Card */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <div className={styles.twoColumnLayout}>
           <div className={styles.leftColumnProject}>
-            <h2>Driver device:</h2>
+            <h2>{t("otherApps.driverDevice.title")}:</h2>
             <p>
-              <strong>Goals: </strong>
-              The app assists drivers by showing whether they are adhering to
-              the schedule, displaying upcoming trips, passenger count, the next
-              stop, and their location on a map. It was required to fit specific
-              device constraints.
+              <strong>{t("otherApps.driverDevice.goals")}: </strong>
+              {t("otherApps.driverDevice.goalDescription")}
             </p>
 
             <p>
-              <strong>Clients: </strong>
-              Bus agencies around Barcelona.
+              <strong>{t("otherApps.driverDevice.clients")}: </strong>
+              {t("otherApps.driverDevice.clientNames")}.
             </p>
 
             <p>
-              <strong>My role: </strong>
-              Redesigned the app to fit various devices and customized the UI
-              for different clients.
+              <strong>{t("otherApps.driverDevice.myRole")}: </strong>
+              {t("otherApps.driverDevice.roleDescription")}
             </p>
           </div>
           <div className={styles.rightColumnProject}>
             <img
               src={waysion}
               className={styles.border10}
-              alt="Project Image"
+              alt={t("otherApps.driverDevice.imageAlt")}
             />
           </div>
         </div>
+      </div>
+      {/* Flecha de "Next Project" */}
+      <div
+        className={styles.nextProjectContainer}
+        onClick={handlePreviousProject}
+      >
+        <img
+          src={arrowLeft}
+          alt="Previous Project Arrow"
+          className={styles.arrowIcon}
+        />
+        <span>Previous Project</span>
       </div>
     </div>
   );
