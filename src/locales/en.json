@@ -9,7 +9,7 @@
   "landing": {
     "greeting": "Hello! I am",
     "name": "Cristina Sánchez",
-    "description": "Barcelona based Fullstack designer"
+    "description": "Barcelona based UX Designer"
   },
   "Close": "Close",
   "previousProject": "Previous Project",
@@ -27,10 +27,10 @@
   "about": "About",
 
   "aboutCard": {
-    "intro": "Hello, I’m Cristina, a Full-Stack Designer",
-    "description": "which means I not only design but also code!—",
-    "experience": "with 10 years of expertise in intelligent transportation systems. My specialization lies in transforming complex data and processes into seamless, intuitive user experiences that people can engage with effortlessly. While I can't showcase all of my projects due to data protection, I’ve included the ones I have permission to share here. I’m quick to learn new languages, tools, and frameworks and this is my Core stack:",
-    "stack": "Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, Angular, Node, Git"
+    "intro": "Hello, I’m Cristina, a UX Designer ",
+    "description": "who happens to code!—",
+    "experience": "with 10 years of expertise in intelligent transportation systems. My specialization lies in transforming complex data and processes into seamless, intuitive user experiences that people can engage with effortlessly. While I can't showcase all of my projects due to data protection, I’ve included the ones I have permission to share here. I’m quick to learn new languages, tools, and frameworks and this are some of the tools that I've worked with:",
+    "stack": "Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, React, Git"
   },
   "extraProject": "Extra Project",
   "teletextTitle": "Teletext",

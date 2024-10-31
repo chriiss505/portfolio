@@ -9,7 +9,7 @@
   "landing": {
     "greeting": "¡Hola! Soy",
     "name": "Cristina Sánchez",
-    "description": "Diseñadora Fullstack en Barcelona"
+    "description": "Ux Designer en Barcelona"
   },
   "previousProject": "Proyecto Anterior",
   "nextProject": "Siguiente Proyecto",
@@ -28,10 +28,10 @@
   "about": "Acerca de",
 
   "aboutCard": {
-    "intro": "Hola, soy Cristina, una diseñadora Full-Stack",
-    "description": "lo que significa que no solo diseño sino que también programo!—",
-    "experience": "con 10 años de experiencia en sistemas de transporte inteligentes. Mi especialización radica en transformar datos y procesos complejos en experiencias de usuario intuitivas y sin esfuerzo con las que la gente puede interactuar. Aunque no puedo mostrar todos mis proyectos debido a la protección de datos, he incluido aquellos con los que tengo permiso para compartir aquí. Aprendo rápidamente nuevos idiomas, herramientas y marcos, y este es mi stack principal:",
-    "stack": "Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, Angular, Node, Git"
+    "intro": "Hola, soy Cristina, una diseñadora UX ",
+    "description": "que también sabe programar—",
+    "experience": "con 10 años de experiencia en sistemas de transporte inteligentes. Mi especialización radica en transformar datos y procesos complejos en experiencias de usuario intuitivas y sin esfuerzo con las que la gente puede interactuar. Aunque no puedo mostrar todos mis proyectos debido a la protección de datos, he incluido aquellos con los que tengo permiso para compartir aquí. Aprendo rápidamente nuevos idiomas, herramientas y frameworks, estas son las herramientas con las que más he trabajado:",
+    "stack": "Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, React, Git"
   },
 
   "extraProject": "Proyecto Extra",
