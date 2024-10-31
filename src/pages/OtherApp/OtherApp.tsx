@@ -182,7 +182,7 @@ const OtherApp: React.FC = () => {
           alt="Previous Project Arrow"
           className={styles.arrowIcon}
         />
-        <span>Previous Project</span>
+        <span>{t("previousProject")}</span>
       </div>
     </div>
   );

@@ -11,14 +11,16 @@
     "name": "Cristina Sánchez",
     "description": "Diseñadora Fullstack en Barcelona"
   },
+  "previousProject": "Proyecto Anterior",
+  "nextProject": "Siguiente Proyecto",
   "Close": "Cerrar",
   "readMore": "Leer más",
 
   "thework": "Proyectos",
   "streetPidTitle": "Pantallas de Información en la Calle",
-  "streetPidDescription": "Diseñé la aplicación para las pantallas de información pública en las paradas de autobús. Las pantallas muestran la próxima llegada de autobuses junto con otra información.",
+  "streetPidDescription": "Diseñé y desarrollé una aplicación nativa para pantallas de información pública en las paradas de autobús. Estas pantallas muestran la próxima llegada de autobuses, junto con otra información relevante para los usuarios en tiempo real.",
   "onboardPidTitle": "Pantallas de Información a Bordo",
-  "onboardPidDescription": "La pantalla pública en el vehículo se alimenta de la computadora a bordo y muestra las próximas paradas y la información relevante del usuario.",
+  "onboardPidDescription": "Creé una aplicación nativa para pantallas públicas dentro del vehículo, que se conecta al ordenador a bordo. Esta pantalla muestra información en tiempo real sobre las próximas paradas y otros datos relevantes para los usuarios.",
   "itsWebManagersTitle": "Gestores Web de ITS",
   "itsWebManagersDescription": "Los Sistemas de Transporte Inteligente (ITS) gestionan flotas de transporte público en tiempo real. Me enfoqué en el diseño UI/UX, asegurando que la interfaz fuera intuitiva para los operadores de transporte.",
   "otherAppsTitle": "Otras Aplicaciones",

@@ -275,12 +275,12 @@ const ITSsystem: React.FC = () => {
             alt="Previous Project Arrow"
             className={styles.arrowIcon}
           />
-          <span>{t("Previous Project")}</span>
+          <span>{t("previousProject")}</span>
         </div>
 
         {/* Flecha de siguiente proyecto */}
         <div onClick={goToNextProject} className={styles.navigationItem}>
-          <span>{t("Next Project")}</span>
+          <span>{t("nextProject")}</span>
           <img
             src={arrowRight}
             alt="Next Project Arrow"

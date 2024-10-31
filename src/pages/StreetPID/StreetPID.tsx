@@ -234,7 +234,7 @@ const StreetPID: React.FC = () => {
       </div>
       {/* Flecha de "Next Project" */}
       <div className={styles.nextProjectContainer} onClick={handleNextProject}>
-        <span>Next Project</span>
+        <span>{t("nextProject")}</span>
         <img
           src={arrowRight}
           alt="Next Project Arrow"
