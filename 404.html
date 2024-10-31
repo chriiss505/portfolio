@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>React Router</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      a {
+        color: #0073e6;
+        text-decoration: none;
+      }
+    </style>
     <script type="text/javascript">
+      var allowedPaths = ["", "/", "/index.html"]; // Agrega rutas específicas aquí si deseas permitir rutas válidas adicionales.
       var pathSegmentsToKeep = 1;
 
       var l = window.location;
-      l.replace(
-        l.protocol +
-          "//" +
-          l.hostname +
-          (l.port ? ":" + l.port : "") +
-          l.pathname
-            .split("/")
-            .slice(0, 1 + pathSegmentsToKeep)
-            .join("/") +
-          "/?/" +
-          l.pathname
-            .slice(1)
-            .split("/")
-            .slice(pathSegmentsToKeep)
-            .join("/")
-            .replace(/&/g, "~and~") +
-          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-          l.hash
-      );
+      if (!allowedPaths.includes(l.pathname)) {
+        l.replace(
+          l.protocol +
+            "//" +
+            l.hostname +
+            (l.port ? ":" + l.port : "") +
+            l.pathname
+              .split("/")
+              .slice(0, 1 + pathSegmentsToKeep)
+              .join("/") +
+            "/?/" +
+            l.pathname
+              .slice(1)
+              .split("/")
+              .slice(pathSegmentsToKeep)
+              .join("/")
+              .replace(/&/g, "~and~") +
+            (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+            l.hash
+        );
+      }
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>404 - Page Not Found</h1>
+    <p>Sorry, the page you are looking for doesn't exist.</p>
+    <a href="/">Go back to the homepage</a>
+  </body>
 </html>
