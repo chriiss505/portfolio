@@ -67,6 +67,10 @@ function App() {
                 </div>
                 <div className={styles.cardGrid}>
                   {/* Tarjetas de trabajo con traducciones */}
+                  <IconCard
+                    text={t("transportationProjects")}
+                    className={styles.customIconCard}
+                  />
                   <Card
                     imageSrc={streetPIDImage}
                     title={t("streetPidTitle")} // Títulos traducidos
@@ -99,8 +103,24 @@ function App() {
                     readMoreLink="/other-app"
                     backgroundColor="var(--section-4-background)"
                   />
-                </div>
 
+                  <IconCard
+                    text={t("artProject")}
+                    className={styles.customIconCard}
+                  />
+                  <div className={styles.cardGrid}>
+                    <Card
+                      imageSrc={teletextImage}
+                      title={t("teletextTitle")}
+                      tags={["GraphicDesign", "Coding"]}
+                      description={t("teletextDescription")}
+                      readMoreLink="/teletext"
+                      backgroundColor="var(--section-5-background)"
+                      textColor="var(--magenta)"
+                      className={styles.customCard}
+                    />
+                  </div>
+                </div>
                 {/* Sección About */}
                 <div className={styles.header}>
                   <div className={styles.headerLineContainer}>
@@ -111,24 +131,6 @@ function App() {
                   </h1>
                 </div>
                 <AboutCard />
-                <IconCard
-                  text={t("extraProject")}
-                  imgSrc={arrowDown}
-                  rightImgSrc={arrowDown}
-                  className={styles.customIconCard}
-                />
-                <div className={styles.cardGrid}>
-                  <Card
-                    imageSrc={teletextImage}
-                    title={t("teletextTitle")}
-                    tags={["GraphicDesign", "Coding"]}
-                    description={t("teletextDescription")}
-                    readMoreLink="/teletext"
-                    backgroundColor="var(--section-5-background)"
-                    textColor="var(--magenta)"
-                    className={styles.customCard}
-                  />
-                </div>
 
                 {/* Sección Contact */}
                 <div className={styles.header}>

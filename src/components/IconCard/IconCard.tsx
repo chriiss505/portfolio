@@ -26,7 +26,7 @@ const IconCard: React.FC<IconCardProps> = ({
       {text}
     </a>
   ) : (
-    <h2 className={styles.iconCardTitle}>{text}</h2>
+    <h3 className={styles.iconCardTitle}>{text}</h3>
   );
 
   return (

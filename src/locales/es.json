@@ -9,19 +9,27 @@
   "landing": {
     "greeting": "¡Hola! Soy",
     "name": "Cristina Sánchez",
-    "description": "Ux Designer en Barcelona"
+    "position": "UX/UI",
+    "positionDesigner": " Designer",
+    "positionDeveloper": " Developer",
+
+    "location": "en Barcelona"
   },
   "previousProject": "Proyecto Anterior",
   "nextProject": "Siguiente Proyecto",
   "Close": "Cerrar",
   "readMore": "Leer más",
 
+  "carousel": {
+    "title": "Imágenes de producto"
+  },
+
   "thework": "Proyectos",
   "streetPidTitle": "Pantallas de Información en la Calle",
   "streetPidDescription": "Diseñé y desarrollé una aplicación nativa para pantallas de información pública en las paradas de autobús. Estas pantallas muestran la próxima llegada de autobuses, junto con otra información relevante para los usuarios en tiempo real.",
   "onboardPidTitle": "Pantallas de Información a Bordo",
   "onboardPidDescription": "Creé una aplicación nativa para pantallas públicas dentro del vehículo, que se conecta al ordenador a bordo. Esta pantalla muestra información en tiempo real sobre las próximas paradas y otros datos relevantes para los usuarios.",
-  "itsWebManagersTitle": "Gestores Web de ITS",
+  "itsWebManagersTitle": "Sistemas de Transporte Inteligente",
   "itsWebManagersDescription": "Los Sistemas de Transporte Inteligente (ITS) gestionan flotas de transporte público en tiempo real. Me enfoqué en el diseño UI/UX, asegurando que la interfaz fuera intuitiva para los operadores de transporte.",
   "otherAppsTitle": "Otras Aplicaciones",
   "otherAppsDescription": "Explora proyectos más pequeños sobre transporte de pasajeros y soluciones de movilidad, diseñados para mejorar la eficiencia y conveniencia para pasajeros y operadores mientras cumplen con los estándares de la industria.",
@@ -29,12 +37,13 @@
 
   "aboutCard": {
     "intro": "Hola, soy Cristina, una diseñadora UX ",
-    "description": "que también sabe programar—",
-    "experience": "con 10 años de experiencia en sistemas de transporte inteligentes. Mi especialización radica en transformar datos y procesos complejos en experiencias de usuario intuitivas y sin esfuerzo con las que la gente puede interactuar. Aunque no puedo mostrar todos mis proyectos debido a la protección de datos, he incluido aquellos con los que tengo permiso para compartir aquí. Aprendo rápidamente nuevos idiomas, herramientas y frameworks, estas son las herramientas con las que más he trabajado:",
-    "stack": "Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, React, Git"
+    "description": "y también desarrolladora—",
+    "experience": " con 10 años de experiencia en sistemas inteligentes de transporte. Me especializo en transformar datos complejos en experiencias de usuario intuitivas y fluidas. Aunque algunos proyectos están protegidos, aquí comparto los que puedo mostrar. Aprendo rápido nuevas herramientas, y estas son algunas con las que trabajo:",
+    "stack": " Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, React, Git"
   },
 
-  "extraProject": "Proyecto Extra",
+  "artProject": "Proyecto artístico",
+  "transportationProjects": "Proyectos de transporte",
   "teletextTitle": "Teletexto",
   "teletextDescription": "En 2023, mi amiga Adela Bacardit y yo nos inscribimos en el concurso “Stripart”, un concurso para jóvenes artistas. Ganamos el primer premio con este proyecto y tuvimos la oportunidad de exhibirlo durante un mes en el C.C. Guinardó.",
   "contact": "Contacto",
@@ -190,7 +199,7 @@
     "videoDescription": "Este video muestra el sistema de información en tiempo real a bordo de un Aerobus, que conecta el centro de Barcelona con el aeropuerto. El flujo comienza con el autobús saliendo de una parada, mostrando conexiones. A continuación, se muestran todas las paradas a lo largo de la ruta, con las paradas completadas atenuadas. La pantalla luego se divide para mostrar la hora actual, seguida de las conexiones de vuelo. Se presentan imágenes y videos informativos mientras se muestra continuamente la próxima parada, asegurando que los pasajeros se mantengan informados durante todo el viaje."
   },
   "itsSystem": {
-    "title": "Sistema de Transporte Inteligente",
+    "title": "Sistemas de Transporte Inteligente*",
     "projectOverview": "Descripción del Proyecto",
     "goals": "Objetivos",
     "goalDescription": "El objetivo de este Sistema de Transporte Inteligente (ITS) es ser una solución integral para gestionar las operaciones de tránsito en tiempo real. Mi rol se centró en el diseño UI/UX, específicamente en la creación de prototipos y el diseño de la interfaz para asegurar que fuera intuitiva para los operadores de tránsito, conductores y pasajeros.",

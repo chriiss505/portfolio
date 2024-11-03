@@ -9,7 +9,13 @@
   "landing": {
     "greeting": "Hello! I am",
     "name": "Cristina Sánchez",
-    "description": "Barcelona based UX Designer"
+    "position": "UX/UI",
+    "positionDesigner": " Designer",
+    "positionDeveloper": " Developer",
+    "location": "from Barcelona"
+  },
+  "carousel": {
+    "title": "Product Images"
   },
   "Close": "Close",
   "previousProject": "Previous Project",
@@ -20,19 +26,20 @@
   "streetPidDescription": "I designed and developed a native application for public information screens at bus stops. These screens display real-time information on upcoming bus arrivals along with other relevant details for users.",
   "onboardPidTitle": "On Board PIDs",
   "onboardPidDescription": "I created a native application for public screens inside the vehicle that connects to the onboard computer. This screen provides real-time information on upcoming stops and other relevant details for users.",
-  "itsWebManagersTitle": "ITS Web Managers",
+  "itsWebManagersTitle": "Intelligent Transportation Systems",
   "itsWebManagersDescription": "Intelligent Transportation Systems (ITS) manage public transport fleets in real-time. I focused on UI/UX design, ensuring the interface was intuitive for transit operators.",
   "otherAppsTitle": "Other Apps",
   "otherAppsDescription": "Explore smaller projects on passenger transportation and mobility solutions, designed to improve efficiency and convenience for passengers and operators while meeting industry standards.",
   "about": "About",
 
   "aboutCard": {
-    "intro": "Hello, I’m Cristina, a UX Designer ",
-    "description": "who happens to code!—",
-    "experience": "with 10 years of expertise in intelligent transportation systems. My specialization lies in transforming complex data and processes into seamless, intuitive user experiences that people can engage with effortlessly. While I can't showcase all of my projects due to data protection, I’ve included the ones I have permission to share here. I’m quick to learn new languages, tools, and frameworks and this are some of the tools that I've worked with:",
-    "stack": "Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, React, Git"
+    "intro": "I’m Cristina, a UX/UI Designer ",
+    "description": "who codes —",
+    "experience": "with 10 years in intelligent transportation systems. I turn complex data into intuitive, seamless user experiences. While some projects are protected, I’m excited to share what I can here. I’m quick to pick up new tools, and here are a few I use: ",
+    "stack": " Adobe Creative Cloud, Figma, Blender, Android Studio (Java), HTML, CSS, SCSS, JavaScript, React, Git"
   },
-  "extraProject": "Extra Project",
+  "artProject": "Artistic Project",
+  "transportationProjects": "Transportation Projects",
   "teletextTitle": "Teletext",
   "teletextDescription": "In 2023, my friend Adela Bacardit and I entered the “Stripart” contest, a contest for young artists. We won first prize with this project and had the chance to exhibit it for a whole month at C.C. Guinardó.",
   "contact": "Contact",
@@ -150,7 +157,7 @@
     "videoDescription": "This video showcases the real-time information system onboard an Aerobus, which connects central Barcelona with the airport. The flow begins with the bus departing from a stop, displaying connections. Next, all stops along the route are shown, with completed stops grayed out. The screen then splits to display the current time, followed by flight connections. Informative images and videos are presented while continuously displaying the upcoming stop, ensuring passengers stay informed throughout the journey."
   },
   "its": {
-    "title": "ITS Web Managers",
+    "title": "Intelligent Transportation Systems",
     "projectOverview": "Project overview:",
     "goals": "Goals",
     "description": "This Intelligent Transportation System (ITS) goal is to be a comprehensive solution to manage transit operations in real-time. My role focused on UI/UX design, specifically prototyping and designing the interface to ensure it was intuitive for transit operators, drivers, and passengers.",
