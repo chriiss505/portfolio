@@ -3,13 +3,15 @@
 .landing {
   position: relative;
   display: flex; /* Usamos flexbox para alinear las columnas */
-  width: 80vw; /* Ancho completo de la ventana */
+  width: 100%; /* Ancho completo de la ventana */
   max-width: 1200px;
   margin-top: 120px;
-  background: url("../../assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+  background: url("../../assets/images/gri2.png") no-repeat center center; /* Cambia por tu imagen de fondo */
   background-size: cover; /* Asegúrate de que la imagen cubra el área */
   mix-blend-mode: multiply; /* Efecto de mezcla */
   color: var(--text-color); /* Color del texto */
+  border: 1px solid black;
+  border-radius: 10px;
 }
 .stickerContainer {
   margin-top: 20px;
@@ -179,17 +181,20 @@
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
+  margin: 30px 0px;
 }
 
 .gif {
   max-height: 700px; /* Altura máxima del gif */
   width: auto; /* Mantiene la proporción del gif */
+  filter: grayscale(100%) brightness(1.1) contrast(1.1);
 }
 
 .highlighted {
   font-size: 61px;
   font-weight: 100;
   font-family: "Erica One", sans-serif;
+  color: var(--secondary-text-color);
 }
 
 .iconContainer {
@@ -224,7 +229,7 @@
   .landing {
     display: flex; /* Usamos flexbox para alinear las columnas */
     width: 80vw; /* Ancho completo de la ventana */
-    background: url("../../assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+    background: url("../../assets/images/gri2.png") no-repeat center center; /* Cambia por tu imagen de fondo */
     background-size: cover; /* Asegúrate de que la imagen cubra el área */
     mix-blend-mode: multiply; /* Efecto de mezcla */
     color: var(--text-color); /* Color del texto */
@@ -283,7 +288,7 @@
     flex-direction: column;
     width: 80vw; /* Ancho completo de la ventana */
     margin-top: 80px;
-    background: url("../../assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+    background: url("../../assets/images/gri2.png") no-repeat center center; /* Cambia por tu imagen de fondo */
     background-size: cover; /* Asegúrate de que la imagen cubra el área */
     mix-blend-mode: multiply; /* Efecto de mezcla */
     color: var(--text-color); /* Color del texto */

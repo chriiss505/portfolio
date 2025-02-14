@@ -87,7 +87,7 @@ const OnboardPID: React.FC = () => {
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
           title={t("OnBoardPID.technologiesTitle")}
-          titleColor="var(--section-2-title)"
+          titleColor="var(--accent)"
           icons={[
             { src: illustrator, alt: t("OnBoardPID.icon1") },
             { src: photoshop, alt: t("OnBoardPID.icon2") },
@@ -119,7 +119,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title={t("OnBoardPID.architectureTitle")}
-          titleColor="var(--section-2-title)"
+          titleColor="var(--accent)"
           icons={[{ src: computer, alt: t("OnBoardPID.icon5") }]}
           paragraph={
             <>
@@ -161,7 +161,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title={t("OnBoardPID.keyFeaturesTitle")}
-          titleColor="var(--section-2-title)"
+          titleColor="var(--accent)"
           icons={[{ src: keyboard, alt: t("OnBoardPID.icon6") }]}
           paragraph={
             <>
@@ -190,7 +190,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title={t("OnBoardPID.challengesTitle")}
-          titleColor="var(--section-2-title)"
+          titleColor="var(--accent)"
           icons={[{ src: handw, alt: t("OnBoardPID.icon7") }]}
           paragraph={
             <>
@@ -215,7 +215,7 @@ const OnboardPID: React.FC = () => {
 
         <DescriptionLayout
           title={t("OnBoardPID.designConsiderationsTitle")}
-          titleColor="var(--section-2-title)"
+          titleColor="var(--accent)"
           icons={[{ src: brillo, alt: t("OnBoardPID.icon8") }]}
           paragraph={
             <>

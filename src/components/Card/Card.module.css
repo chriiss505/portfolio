@@ -7,7 +7,9 @@
   border-radius: 10px;
   max-width: 1200px;
   width: 100%; /* Se ajusta al tamaño de la pantalla */
-  color: white;
+  color: var(--text-color);
+  box-shadow: 0 2px 10px rgba(64, 0, 255, 0.1);
+  border: 2px dashed var(--accent);
 }
 
 /* La columna izquierda de la imagen */
@@ -21,6 +23,7 @@
   width: 80%;
   object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
   border-radius: 10px; /* Redondea los bordes de la imagen */
+  border: 5px solid black;
 }
 
 /* La columna derecha del contenido */
@@ -49,7 +52,6 @@
 .cardDescription {
   margin-top: 10px;
   max-width: 600px;
-  font-weight: lighter;
 }
 
 /* Botón alineado a la derecha */

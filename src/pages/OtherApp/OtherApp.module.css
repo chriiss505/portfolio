@@ -61,7 +61,7 @@
 .backgroundColor {
   color: var(--white);
   text-align: center;
-  background-color: var(--section-4-background); /* Lila */
+  background-color: var(--accent); /* Lila */
 }
 
 .whiteBackground {
@@ -70,7 +70,7 @@
   background-color: var(--background-strong); /* Blanco */
 }
 .whiteBackground h2 {
-  color: var(--section-4-title);
+  color: var(--accent);
 }
 
 .leftColumnProject {
@@ -110,7 +110,7 @@
   width: 30%;
 }
 .leftColumn h2 {
-  color: var(--section-4-title);
+  color: var(--accent);
 }
 
 .rightColumn {
@@ -130,7 +130,7 @@
 
 .separator {
   border: none;
-  border-top: 1px dashed var(--section-4-background); /* Cambia el color según sea necesario */
+  border-top: 1px dashed var(--accent); /* Cambia el color según sea necesario */
   margin: 20px 0; /* Espaciado alrededor de la línea */
 }
 /* MEDIA QUERIES */

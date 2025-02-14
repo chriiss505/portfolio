@@ -25,6 +25,7 @@
   width: 50%; /* La columna de video ocupa la mitad */
   cursor: pointer; /* Cambiar el cursor al pasar el ratón */
   transition: transform 0.3s ease-in-out; /* Transición suave */
+  margin: auto;
 }
 
 .videoContainer:hover {
@@ -48,7 +49,7 @@
 
 .title {
   margin-bottom: 10px; /* Espacio debajo del título */
-  color: var(--section-2-title); /* Color del texto */
+  color: var(--accent); /* Color del texto */
 }
 
 /* Media Queries para hacer el diseño responsivo */

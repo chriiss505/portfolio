@@ -3,20 +3,23 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  p {
-    color: var(--text-color);
-    font-weight: bold;
-  }
-
   background-color: var(
     --background-strong
   ); /* Cambia el color de fondo según tu diseño */
   border-radius: 8px;
+
+  box-shadow: 0 2px 10px rgba(64, 0, 255, 0.1);
+  border: 2px dashed var(--accent); /* Borde de 1px en negro */
 }
 
-.redText {
-  color: var(--text-color);
+.accentText {
+  color: var(--secondary-text-color);
   font-weight: 200;
+  font-weight: bold;
+}
+.regularText {
+  font-weight: 200;
+  color: var(--text-color);
 }
 
 .leftColumn {

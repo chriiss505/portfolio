@@ -19,7 +19,7 @@ const IconCard: React.FC<IconCardProps> = ({
   const content = link ? (
     <a
       href={link}
-      className={styles.iconCardTitle}
+      className={styles.iconCardLink}
       target="_blank"
       rel="noopener noreferrer"
     >

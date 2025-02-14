@@ -65,7 +65,7 @@
 }
 
 .backgroundColor {
-  background-color: var(--section-3-background); /* Lila */
+  background-color: var(--accent); /* Lila */
 }
 
 .whiteBackground {
@@ -164,7 +164,7 @@
 }
 .separator {
   border: none;
-  border-top: 1px dashed var(--section-3-background); /* Cambia el color según sea necesario */
+  border-top: 1px dashed var(--accent); /* Cambia el color según sea necesario */
   margin: 20px 0; /* Espaciado alrededor de la línea */
 }
 /* MEDIA QUERIES */

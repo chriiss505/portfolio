@@ -105,7 +105,7 @@ const StreetPID: React.FC = () => {
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
           title={t("streetPID.technologiesTitle")} // Traducción del título
-          titleColor="var(--section-1-title)"
+          titleColor="var(--accent)"
           icons={[
             { src: illustrator, alt: "Icon 1" },
             { src: photoshop, alt: "Icon 2" },
@@ -140,7 +140,7 @@ const StreetPID: React.FC = () => {
         <hr className={styles.separator} />
         <DescriptionLayout
           title={t("streetPID.architectureTitle")} // Traducción del título
-          titleColor="var(--section-1-title)"
+          titleColor="var(--accent)"
           icons={[{ src: computer, alt: "Icon 6" }]}
           paragraph={
             <>
@@ -156,7 +156,7 @@ const StreetPID: React.FC = () => {
         <hr className={styles.separator} />
         <DescriptionLayout
           title={t("streetPID.keyFeaturesTitle")} // Traducción del título
-          titleColor="var(--section-1-title)"
+          titleColor="var(--accent)"
           icons={[{ src: keyboard, alt: "Icon 8" }]}
           paragraph={
             <>
@@ -180,7 +180,7 @@ const StreetPID: React.FC = () => {
         <hr className={styles.separator} />
         <DescriptionLayout
           title={t("streetPID.challengesTitle")} // Traducción del título
-          titleColor="var(--section-1-title)"
+          titleColor="var(--accent)"
           icons={[{ src: sakura, alt: "Icon 10" }]}
           paragraph={
             <>
@@ -204,7 +204,7 @@ const StreetPID: React.FC = () => {
         <hr className={styles.separator} />
         <DescriptionLayout
           title={t("streetPID.designConsiderationsTitle")} // Traducción del título
-          titleColor="var(--section-1-title)"
+          titleColor="var(--accent)"
           icons={[{ src: handw, alt: "Icon 12" }]}
           paragraph={
             <>
@@ -229,7 +229,7 @@ const StreetPID: React.FC = () => {
 
       {/* Cuarta Card con el componente Carousel */}
       <div className={`${styles.card} ${styles.whiteBackground}`}>
-        <Carousel titleColor="var(--section-1-title)" />{" "}
+        <Carousel titleColor="var(--accent)" />{" "}
         {/* Aquí usas tu componente Carousel */}
       </div>
       {/* Flecha de "Next Project" */}

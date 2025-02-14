@@ -19,6 +19,11 @@
   margin: 10px;
   text-decoration: none;
 }
+.iconCardLink {
+  color: var(--accent);
+  margin: 10px;
+  text-decoration: none;
+}
 @media (max-width: 768px) {
   .iconCard {
     flex-direction: column;

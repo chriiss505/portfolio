@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 interface ButtonProps {
   text: string;
   link?: string; // Hacer el enlace opcional
+  children?: React.ReactNode; // Asegura que 'children' esté definido
+  style?: React.CSSProperties; // Agrega 'style' aquí
 }
 
 const Button: React.FC<ButtonProps> = ({ text, link }) => {

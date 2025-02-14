@@ -10,12 +10,14 @@ const AboutCard: React.FC = () => {
     <div className={styles.aboutCard}>
       <div className={styles.leftColumn}>
         <p>
-          <span className={styles.redText}>{t("aboutCard.intro")}</span>
-          <span className={styles.redText}>
+          <span className={styles.regularText}>{t("aboutCard.intro")}</span>
+          <span className={styles.regularText}>
             {t("aboutCard.description")}
           </span>{" "}
-          <span className={styles.redText}>{t("aboutCard.experience")}</span>{" "}
-          {t("aboutCard.stack")}
+          <span className={styles.regularText}>
+            {t("aboutCard.experience")}
+          </span>{" "}
+          <span className={styles.accentText}>{t("aboutCard.stack")}</span>
         </p>
       </div>
     </div>

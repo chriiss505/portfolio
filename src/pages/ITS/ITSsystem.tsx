@@ -95,7 +95,7 @@ const ITSsystem: React.FC = () => {
       <div className={`${styles.card} ${styles.whiteBackground}`}>
         <DescriptionLayout
           title={t("itsSystem.designThinkingTitle")} // Traducción del título
-          titleColor="var(--section-3-title)"
+          titleColor="var(--accent)"
           icons={[
             { src: pencil, alt: "Icon 1" },
             { src: define, alt: "Icon 2" },
@@ -138,7 +138,7 @@ const ITSsystem: React.FC = () => {
 
         <DescriptionLayout
           title={t("itsSystem.prototypingTitle")} // Traducción del título
-          titleColor="var(--section-3-title)"
+          titleColor="var(--accent)"
           icons={[{ src: figma, alt: "Icon 6" }]}
           paragraph={
             <>
@@ -183,7 +183,7 @@ const ITSsystem: React.FC = () => {
 
         <DescriptionLayout
           title={t("itsSystem.designSystemTitle")} // Traducción del título
-          titleColor="var(--section-3-title)"
+          titleColor="var(--accent)"
           icons={[{ src: keyboard, alt: "Icon 8" }]}
           paragraph={
             <>
@@ -215,7 +215,7 @@ const ITSsystem: React.FC = () => {
 
         <DescriptionLayout
           title={t("itsSystem.uxResearchTitle")} // Traducción del título
-          titleColor="var(--section-3-title)"
+          titleColor="var(--accent)"
           icons={[{ src: sakura, alt: "Icon 10" }]}
           paragraph={
             <>
@@ -238,7 +238,7 @@ const ITSsystem: React.FC = () => {
 
         <DescriptionLayout
           title={t("itsSystem.keyFeaturesTitle")} // Traducción del título
-          titleColor="var(--section-3-title)"
+          titleColor="var(--accent)"
           icons={[{ src: brillo, alt: "Icon 12" }]}
           paragraph={
             <>

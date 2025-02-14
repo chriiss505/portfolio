@@ -8,14 +8,14 @@
   border-radius: 5px; /* Bordes muy redondeados */
   transition: background-color 0s; /* Transición suave para el color de fondo */
   display: inline-block; /* Asegura que el botón se ajuste al contenido */
-  box-shadow: 3px 3px 0px var(--green3); /* Sombra con posición X 4, Y 4, sin blur, color #c0c0c0 */
+  box-shadow: 3px 3px 0px var(--black); /* Sombra con posición X 4, Y 4, sin blur, color #c0c0c0 */
   stroke-width: 3px;
   border: 2px solid var(--text-color);
 }
 
 .button:hover {
   background-color: var(--white); /* Color de fondo al pasar el mouse */
-  box-shadow: 6px 6px 0px var(--green3); /* Sombra con posición X 4, Y 4, sin blur, color #c0c0c0 */
+  box-shadow: 6px 6px 0px var(--green2); /* Sombra con posición X 4, Y 4, sin blur, color #c0c0c0 */
 }
 @media (max-width: 768px) {
   .button {

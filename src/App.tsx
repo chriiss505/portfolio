@@ -77,7 +77,7 @@ function App() {
                     tags={["UX", "UI", "Coding", "GraphicDesign"]}
                     description={t("streetPidDescription")} // Descripción traducida
                     readMoreLink="/street-pid"
-                    backgroundColor="var(--section-1-background)"
+                    backgroundColor="var(--background-strong)"
                   />
                   <Card
                     imageSrc={onboardPIDImage}
@@ -85,7 +85,7 @@ function App() {
                     tags={["UX", "UI", "Coding", "GraphicDesign"]}
                     description={t("onboardPidDescription")}
                     readMoreLink="/onboard-pid"
-                    backgroundColor="var(--section-2-background)"
+                    backgroundColor="var(--background-strong)"
                   />
                   <Card
                     imageSrc={itsImage}
@@ -93,7 +93,7 @@ function App() {
                     tags={["UX", "GraphicDesign"]}
                     description={t("itsWebManagersDescription")}
                     readMoreLink="/its-system"
-                    backgroundColor="var(--section-3-background)"
+                    backgroundColor="var(--background-strong)"
                   />
                   <Card
                     imageSrc={otherAppsImage}
@@ -101,7 +101,7 @@ function App() {
                     tags={["UX", "GraphicDesign"]}
                     description={t("otherAppsDescription")}
                     readMoreLink="/other-app"
-                    backgroundColor="var(--section-4-background)"
+                    backgroundColor="var(--background-strong)"
                   />
 
                   <IconCard
@@ -115,7 +115,7 @@ function App() {
                       tags={["GraphicDesign", "Coding"]}
                       description={t("teletextDescription")}
                       readMoreLink="/teletext"
-                      backgroundColor="var(--section-5-background)"
+                      backgroundColor="var(--background-strong)"
                       textColor="var(--magenta)"
                       className={styles.customCard}
                     />

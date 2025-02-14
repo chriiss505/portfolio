@@ -8,20 +8,61 @@
   justify-content: center;
   max-width: 1200px;
 }
+.cookie-consent {
+  background: var(--background-color);
+  color: var(--text-color);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid var(--border-color);
+  z-index: 9999;
+}
+
+.cookie-consent .cookie-consent-btn {
+  color: #4e503b;
+  font-size: 13px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.cookie-consent .cookie-consent-decline-btn {
+  color: #fff;
+  background: #c00;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cookie-consent .cookie-consent-btn:hover,
+.cookie-consent .cookie-consent-decline-btn:hover {
+  opacity: 0.8;
+}
+
 .contactGif {
   width: 100%; /* Ajusta el tamaño si es necesario */
   max-width: 150px; /* Por ejemplo, para limitar su tamaño máximo */
+  filter: grayscale(100%) brightness(1.1) contrast(1.1);
 }
 
 .customIconCard {
   display: flex;
   align-items: center;
-  background-color: var(--background-strong); /* Color de fondo */
   border-radius: 8px; /* Esquinas redondeadas */
   width: 100%; /* Ancho completo, igual al de las otras tarjetas */
-
+  background-color: var(--background-strong);
   justify-content: left;
   max-width: 1200px;
+
+  box-shadow: 0 2px 5px rgba(64, 0, 255, 0.1);
+  border: 1px solid black; /* Borde de 1px en negro */
 }
 
 .container {
@@ -32,7 +73,6 @@
   min-height: 100vh; /* Centrado vertical */
   padding: 0 50px;
   background-color: var(--background-color);
-  overflow-x: auto;
   max-width: 100%;
 }
 
@@ -60,10 +100,12 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  background: url("./assets/images/grid.jpg") no-repeat center center; /* Cambia por tu imagen de fondo */
+  background: url("./assets/images/gri2.png") no-repeat center center; /* Cambia por tu imagen de fondo */
   background-size: cover; /* Asegúrate de que la imagen cubra el área */
   mix-blend-mode: multiply; /* Efecto de mezcla */
   padding: 20px 0;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 /* Sección del encabezado */
