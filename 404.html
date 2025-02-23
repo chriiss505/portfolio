@@ -19,31 +19,10 @@
       }
     </style>
     <script type="text/javascript">
-      var allowedPaths = ["", "/", "/index.html"]; // Agrega rutas específicas aquí si deseas permitir rutas válidas adicionales.
-      var pathSegmentsToKeep = 1;
-
-      var l = window.location;
-      if (!allowedPaths.includes(l.pathname)) {
-        l.replace(
-          l.protocol +
-            "//" +
-            l.hostname +
-            (l.port ? ":" + l.port : "") +
-            l.pathname
-              .split("/")
-              .slice(0, 1 + pathSegmentsToKeep)
-              .join("/") +
-            "/?/" +
-            l.pathname
-              .slice(1)
-              .split("/")
-              .slice(pathSegmentsToKeep)
-              .join("/")
-              .replace(/&/g, "~and~") +
-            (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-            l.hash
-        );
-      }
+      // Redirigir todas las rutas a la raíz, donde React Router maneja las rutas internas
+      window.location.replace(
+        window.location.origin + window.location.pathname
+      );
     </script>
   </head>
   <body>
